@@ -101,12 +101,11 @@
 		86D1C1A42791F1A7008B50B0 /* CarbonTracker */ = {
 			isa = PBXGroup;
 			children = (
-				86D1C1A52791F1A7008B50B0 /* AppDelegate.swift */,
-				86D1C1A72791F1A7008B50B0 /* SceneDelegate.swift */,
-				86D1C1A92791F1A7008B50B0 /* ViewController.swift */,
-				86D1C1AB2791F1A7008B50B0 /* Main.storyboard */,
+				86D1C1D82791F1C7008B50B0 /* Model */,
+				86D1C1D92791F1D3008B50B0 /* View */,
+				86D1C1DA2791F1EB008B50B0 /* Controller */,
+				86D1C1DB2791F21C008B50B0 /* SupportingFiles */,
 				86D1C1B12791F1AB008B50B0 /* Assets.xcassets */,
-				86D1C1B32791F1AB008B50B0 /* LaunchScreen.storyboard */,
 				86D1C1B62791F1AB008B50B0 /* Info.plist */,
 				86D1C1AE2791F1A7008B50B0 /* CarbonTracker.xcdatamodeld */,
 			);
@@ -128,6 +127,39 @@
 				86D1C1CB2791F1AB008B50B0 /* CarbonTrackerUITestsLaunchTests.swift */,
 			);
 			path = CarbonTrackerUITests;
+			sourceTree = "<group>";
+		};
+		86D1C1D82791F1C7008B50B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		86D1C1D92791F1D3008B50B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86D1C1B32791F1AB008B50B0 /* LaunchScreen.storyboard */,
+				86D1C1AB2791F1A7008B50B0 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86D1C1DA2791F1EB008B50B0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				86D1C1A92791F1A7008B50B0 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		86D1C1DB2791F21C008B50B0 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				86D1C1A52791F1A7008B50B0 /* AppDelegate.swift */,
+				86D1C1A72791F1A7008B50B0 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
