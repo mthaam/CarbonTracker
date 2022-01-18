@@ -43,7 +43,11 @@ class CarMakeServiceAF {
                     return
                 }
                 do {
-                    completion(.success(try JSONDecoder().decode([CarMakesData].self, from: data)))
+                    let carMakes = try JSONDecoder().decode([CarMakesData].self, from: data)
+                    let sortedCarMakes = carMakes.sorted { firstCar, secondCar in
+                        return firstCar.data.attributes.name < secondCar.data.attributes.name
+                    }
+                    completion(.success(sortedCarMakes))
                 } catch {
                     print("could not decode")
                     completion(.failure(.unableToDecodeResponse))

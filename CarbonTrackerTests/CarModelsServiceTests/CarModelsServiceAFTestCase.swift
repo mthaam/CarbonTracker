@@ -19,7 +19,7 @@ class CarModelsServiceAFTestCase: XCTestCase {
                 XCTFail("Test with correct data failed")
                 return
             }
-            XCTAssertEqual(data[0].data.attributes.name, "Testarossa")
+            XCTAssertEqual(data[0].data.attributes.name, "3.2 Mondial/Cabriolet")
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.9)

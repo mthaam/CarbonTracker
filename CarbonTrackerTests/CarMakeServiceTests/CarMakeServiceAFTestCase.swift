@@ -20,7 +20,7 @@ class CarMakeServiceAFTestCase: XCTestCase {
                 XCTFail("Test with correct data failed")
                 return
             }
-            XCTAssertEqual(data[0].data.id, "5f266411-5bb1-4b91-b044-9707426df630")
+            XCTAssertEqual(data[0].data.id, "0cbbbe22-f5b9-46af-8ea6-941e0be4cf82")
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.9)
