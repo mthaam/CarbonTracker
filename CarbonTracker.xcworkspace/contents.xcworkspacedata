@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CarbonTracker.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:CarbonTracker"
+      name = "CarbonTracker">
+      <Group
+         location = "group:CarbonTracker/Model"
+         name = "Model">
+         <Group
+            location = "group:CarbonTracker/Model/Networking"
+            name = "Networking">
+            <Group
+               location = "group:CarbonTracker/Model/Networking/Car"
+               name = "Car">
+               <FileRef
+                  location = "group:CarbonTracker/Model/Networking/Car/CarMakeService.swift">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:CarbonTracker/Model/Keys"
+            name = "Keys">
+            <FileRef
+               location = "group:CarbonTracker/Model/Keys/APIKeys.swift">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:CarbonTracker/View"
+         name = "View">
+         <Group
+            location = "group:CarbonTracker/View"
+            name = "LaunchScreen.storyboard">
+            <FileRef
+               location = "group:CarbonTracker/View/Base.lproj/LaunchScreen.storyboard">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:CarbonTracker/View"
+            name = "Main.storyboard">
+            <FileRef
+               location = "group:CarbonTracker/View/Base.lproj/Main.storyboard">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:CarbonTracker/Controller"
+         name = "Controller">
+         <Group
+            location = "group:CarbonTracker/Controller/CarViewControllers"
+            name = "CarViewControllers">
+            <FileRef
+               location = "group:CarbonTracker/Controller/CarViewControllers/MyCarViewController.swift">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:CarbonTracker/SupportingFiles"
+         name = "SupportingFiles">
+         <FileRef
+            location = "group:CarbonTracker/SupportingFiles/AppDelegate.swift">
+         </FileRef>
+         <FileRef
+            location = "group:CarbonTracker/SupportingFiles/SceneDelegate.swift">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:CarbonTracker/Assets.xcassets">
+      </FileRef>
+      <FileRef
+         location = "group:CarbonTracker/Info.plist">
+      </FileRef>
+      <Group
+         location = "group:CarbonTracker/CarbonTracker.xcdatamodeld"
+         name = "CarbonTracker.xcdatamodeld">
+         <FileRef
+            location = "group:CarbonTracker/CarbonTracker.xcdatamodeld/CarbonTracker.xcdatamodel">
+         </FileRef>
+      </Group>
+   </Group>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

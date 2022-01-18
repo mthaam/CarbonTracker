@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rgy-Fp-31Z">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +14,11 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RgZ-hT-wbX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.67927527430000001" green="0.875" blue="0.85110521319999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.83592069149017334" blue="0.62189674377441406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="selectionIndicatorTintColor" red="0.61499917507171631" green="0.80489367246627808" blue="0.99023789167404175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
                         <segue destination="1QQ-i7-RTQ" kind="relationship" relationship="viewControllers" id="O6d-xx-mtx"/>
@@ -33,7 +36,7 @@
                 <navigationController id="1QQ-i7-RTQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Footprints" image="paw" id="c1q-DC-WFW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="orA-Kt-Loo">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -44,15 +47,29 @@
             </objects>
             <point key="canvasLocation" x="107" y="-1745"/>
         </scene>
-        <!--View Controller-->
+        <!--Footprints View Controller-->
         <scene sceneID="L9x-gv-nkK">
             <objects>
-                <viewController id="UyL-8T-IU6" sceneMemberID="viewController">
+                <viewController id="UyL-8T-IU6" customClass="FootprintsViewController" customModule="CarbonTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Cx-3f-DiR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWQ-Ia-N0k">
+                                <rect key="frame" x="126.5" y="268.5" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="callCarMakes:" destination="UyL-8T-IU6" eventType="touchUpInside" id="LP5-dI-woX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="oVA-Fu-szn"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.83592069149017334" blue="0.62189674377441406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eWQ-Ia-N0k" firstAttribute="centerY" secondItem="5Cx-3f-DiR" secondAttribute="centerY" id="9b3-L8-4gU"/>
+                            <constraint firstItem="eWQ-Ia-N0k" firstAttribute="centerX" secondItem="5Cx-3f-DiR" secondAttribute="centerX" id="cqP-LX-A6T"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8j5-22-eBM"/>
                 </viewController>
@@ -66,7 +83,7 @@
                 <navigationController id="QmB-YV-wkO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Count" image="co2" id="S8d-bH-eA4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZDQ-8K-C4Z">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -82,10 +99,10 @@
             <objects>
                 <viewController id="97g-dd-uED" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WSs-fz-OmG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="vZk-dF-3ip"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.83592069149017334" blue="0.62189674377441406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="hNv-48-j1e"/>
                 </viewController>
@@ -99,8 +116,9 @@
                 <navigationController id="4Pw-FG-xVQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My car" image="sportive-car" id="5dK-5i-aXg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YaH-v4-Wcd">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.67927527430000001" green="0.875" blue="0.85110521319999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="wAC-nG-wbR" kind="relationship" relationship="rootViewController" id="OeO-Xt-Mo6"/>
@@ -110,29 +128,229 @@
             </objects>
             <point key="canvasLocation" x="101" y="-311"/>
         </scene>
-        <!--View Controller-->
+        <!--My car-->
         <scene sceneID="RzS-tk-4OF">
             <objects>
-                <viewController id="wAC-nG-wbR" sceneMemberID="viewController">
+                <viewController id="wAC-nG-wbR" customClass="MyCarViewController" customModule="CarbonTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yc0-tP-pu8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bl-Gc-BQE">
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <color key="backgroundColor" red="0.0" green="0.83592069149017334" blue="0.62189674377441406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no car yet! Tap top right button to add a car" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="orc-X1-hKy">
+                                <rect key="frame" x="8" y="263.5" width="304" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="d2D-b4-AAI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.67927527430000001" green="0.875" blue="0.85110521319999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1bl-Gc-BQE" firstAttribute="top" secondItem="d2D-b4-AAI" secondAttribute="top" id="8IA-Ww-vzg"/>
+                            <constraint firstItem="d2D-b4-AAI" firstAttribute="trailing" secondItem="1bl-Gc-BQE" secondAttribute="trailing" id="8cJ-Vk-Gz9"/>
+                            <constraint firstItem="orc-X1-hKy" firstAttribute="centerY" secondItem="yc0-tP-pu8" secondAttribute="centerY" id="FLu-Sm-osS"/>
+                            <constraint firstItem="orc-X1-hKy" firstAttribute="leading" secondItem="d2D-b4-AAI" secondAttribute="leading" constant="8" id="GCn-b7-TVH"/>
+                            <constraint firstItem="d2D-b4-AAI" firstAttribute="bottom" secondItem="1bl-Gc-BQE" secondAttribute="bottom" id="Txd-5a-FqG"/>
+                            <constraint firstItem="d2D-b4-AAI" firstAttribute="trailing" secondItem="orc-X1-hKy" secondAttribute="trailing" constant="8" id="UUT-w2-Xp7"/>
+                            <constraint firstItem="1bl-Gc-BQE" firstAttribute="leading" secondItem="d2D-b4-AAI" secondAttribute="leading" id="Y3C-nO-DqB"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8L9-bH-i4X"/>
+                    <navigationItem key="navigationItem" title="My car" id="8L9-bH-i4X">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape.fill" catalog="system" id="DEY-iG-Mxt">
+                            <connections>
+                                <segue destination="Qbo-HN-W94" kind="show" id="1Ht-kY-745"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1Z-rh-zhF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="920" y="-311"/>
         </scene>
+        <!--Manage my cars-->
+        <scene sceneID="AK5-rz-Heq">
+            <objects>
+                <viewController id="Qbo-HN-W94" customClass="AddNewCarViewController" customModule="CarbonTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ebx-ay-fOG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Prm-Fc-Mr4">
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no cars yet! Tap top right button to add a car" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4KH-cB-gFM">
+                                        <rect key="frame" x="16" y="217" width="288" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="LXJ-iu-JTE">
+                                        <rect key="frame" x="141.5" y="8" width="37" height="37"/>
+                                        <color key="color" red="0.91146761178970337" green="0.39219909906387329" blue="0.38404625654220581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.83592069149017334" blue="0.62189674377441406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="LXJ-iu-JTE" firstAttribute="top" secondItem="Prm-Fc-Mr4" secondAttribute="top" constant="8" id="NR3-NV-6Lz"/>
+                                    <constraint firstItem="LXJ-iu-JTE" firstAttribute="centerX" secondItem="Prm-Fc-Mr4" secondAttribute="centerX" id="gAM-sr-pGd"/>
+                                    <constraint firstItem="4KH-cB-gFM" firstAttribute="leading" secondItem="Prm-Fc-Mr4" secondAttribute="leading" constant="16" id="pXs-nZ-OAO"/>
+                                    <constraint firstItem="4KH-cB-gFM" firstAttribute="centerY" secondItem="Prm-Fc-Mr4" secondAttribute="centerY" id="s48-uh-hKz"/>
+                                    <constraint firstAttribute="trailing" secondItem="4KH-cB-gFM" secondAttribute="trailing" constant="16" id="t6f-X8-z6K"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dcj-cA-b0T"/>
+                        <color key="backgroundColor" red="0.67927527430000001" green="0.875" blue="0.85110521319999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dcj-cA-b0T" firstAttribute="trailing" secondItem="Prm-Fc-Mr4" secondAttribute="trailing" id="Bex-nx-4Gh"/>
+                            <constraint firstItem="Prm-Fc-Mr4" firstAttribute="leading" secondItem="Dcj-cA-b0T" secondAttribute="leading" id="Ueg-qS-vnm"/>
+                            <constraint firstItem="Prm-Fc-Mr4" firstAttribute="top" secondItem="Dcj-cA-b0T" secondAttribute="top" id="atA-aL-61P"/>
+                            <constraint firstItem="Dcj-cA-b0T" firstAttribute="bottom" secondItem="Prm-Fc-Mr4" secondAttribute="bottom" id="srT-pX-ndw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Manage my cars" id="iqu-rr-Imw">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus.circle.fill" catalog="system" id="gTl-KT-Vg9">
+                            <connections>
+                                <action selector="addNewCarButtonTapped:" destination="Qbo-HN-W94" id="Dvd-my-stM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="LXJ-iu-JTE" id="lW0-cF-AyL"/>
+                        <segue destination="vkC-6E-T8M" kind="show" identifier="segueToVehicleMake" id="spp-r8-sjn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XaW-vn-aka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1680" y="-311"/>
+        </scene>
+        <!--Select Vehicle Make-->
+        <scene sceneID="Bua-w4-Z4P">
+            <objects>
+                <viewController id="vkC-6E-T8M" customClass="SelectMakeViewController" customModule="CarbonTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kVy-xF-tuU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwT-X7-U9N">
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <color key="backgroundColor" red="0.0" green="0.83592069149017334" blue="0.62189674377441406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjp-5E-lV0">
+                                <rect key="frame" x="8" y="116" width="304" height="331"/>
+                            </pickerView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="smP-yt-mXk">
+                                <rect key="frame" x="141.5" y="52" width="37" height="37"/>
+                                <color key="color" red="0.91146761180000002" green="0.3921990991" blue="0.38404625650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3df-Wb-PMY">
+                                <rect key="frame" x="16" y="463" width="288" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cq2-9s-A0O"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Search Model" cornerStyle="large">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.18054017419999999" green="0.73679703470000002" blue="0.62920290229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchModelButtonTapped:" destination="vkC-6E-T8M" eventType="touchUpInside" id="SdE-GT-vUt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Ha-HG-6XX"/>
+                        <color key="backgroundColor" red="0.67927527430000001" green="0.875" blue="0.85110521319999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Ha-HG-6XX" firstAttribute="trailing" secondItem="3df-Wb-PMY" secondAttribute="trailing" constant="16" id="2xp-kw-23c"/>
+                            <constraint firstItem="Gjp-5E-lV0" firstAttribute="leading" secondItem="1Ha-HG-6XX" secondAttribute="leading" constant="8" id="FIH-3p-CXd"/>
+                            <constraint firstItem="3df-Wb-PMY" firstAttribute="leading" secondItem="1Ha-HG-6XX" secondAttribute="leading" constant="16" id="NZZ-Ii-bHI"/>
+                            <constraint firstItem="VwT-X7-U9N" firstAttribute="top" secondItem="1Ha-HG-6XX" secondAttribute="top" id="OlD-VI-RJM"/>
+                            <constraint firstItem="VwT-X7-U9N" firstAttribute="leading" secondItem="1Ha-HG-6XX" secondAttribute="leading" id="PNO-6v-qYP"/>
+                            <constraint firstItem="1Ha-HG-6XX" firstAttribute="trailing" secondItem="VwT-X7-U9N" secondAttribute="trailing" id="Q1i-ew-YEs"/>
+                            <constraint firstItem="smP-yt-mXk" firstAttribute="top" secondItem="1Ha-HG-6XX" secondAttribute="top" constant="8" id="Yhy-rI-lk7"/>
+                            <constraint firstItem="1Ha-HG-6XX" firstAttribute="trailing" secondItem="Gjp-5E-lV0" secondAttribute="trailing" constant="8" id="dq4-eW-su7"/>
+                            <constraint firstItem="smP-yt-mXk" firstAttribute="centerX" secondItem="kVy-xF-tuU" secondAttribute="centerX" id="gwg-7t-0YA"/>
+                            <constraint firstItem="1Ha-HG-6XX" firstAttribute="bottom" secondItem="Gjp-5E-lV0" secondAttribute="bottom" constant="72" id="k3t-TZ-KLy"/>
+                            <constraint firstItem="Gjp-5E-lV0" firstAttribute="top" secondItem="1Ha-HG-6XX" secondAttribute="top" constant="72" id="lkF-wS-yAn"/>
+                            <constraint firstItem="1Ha-HG-6XX" firstAttribute="bottom" secondItem="VwT-X7-U9N" secondAttribute="bottom" id="tah-SN-Z6L"/>
+                            <constraint firstItem="1Ha-HG-6XX" firstAttribute="bottom" secondItem="3df-Wb-PMY" secondAttribute="bottom" constant="16" id="zvE-K8-jUG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Vehicle Make" id="rak-PH-12D"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="smP-yt-mXk" id="bgq-XZ-zSQ"/>
+                        <outlet property="carMakesPickerView" destination="Gjp-5E-lV0" id="3yD-2B-kM0"/>
+                        <segue destination="UOg-96-Y2Y" kind="show" identifier="segueToSelectModelVC" id="PLF-ZD-c2L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdb-KH-1pb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2480" y="-311"/>
+        </scene>
+        <!--Select Model-->
+        <scene sceneID="NXg-qq-4fC">
+            <objects>
+                <viewController id="UOg-96-Y2Y" customClass="SelectModelViewController" customModule="CarbonTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A85-Ff-Erb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fK-k3-Htt">
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <color key="backgroundColor" red="0.0" green="0.83592069149017334" blue="0.62189674377441406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9V-Ww-Cj5">
+                                <rect key="frame" x="8" y="116" width="304" height="331"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38y-UD-qht">
+                                <rect key="frame" x="16" y="463" width="288" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9Th-Py-Fho"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save and use this model" cornerStyle="large">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.18054017419999999" green="0.73679703470000002" blue="0.62920290229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ile-k3-VRS"/>
+                        <color key="backgroundColor" red="0.67927527430000001" green="0.875" blue="0.85110521319999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ile-k3-VRS" firstAttribute="bottom" secondItem="38y-UD-qht" secondAttribute="bottom" constant="16" id="6zn-YI-bsW"/>
+                            <constraint firstItem="ile-k3-VRS" firstAttribute="trailing" secondItem="8fK-k3-Htt" secondAttribute="trailing" id="DE7-zM-TnH"/>
+                            <constraint firstItem="ile-k3-VRS" firstAttribute="trailing" secondItem="38y-UD-qht" secondAttribute="trailing" constant="16" id="DgM-6K-e4V"/>
+                            <constraint firstItem="8fK-k3-Htt" firstAttribute="top" secondItem="ile-k3-VRS" secondAttribute="top" id="E5m-1X-37p"/>
+                            <constraint firstItem="ile-k3-VRS" firstAttribute="bottom" secondItem="8fK-k3-Htt" secondAttribute="bottom" id="Sf8-mf-K2E"/>
+                            <constraint firstItem="8fK-k3-Htt" firstAttribute="leading" secondItem="ile-k3-VRS" secondAttribute="leading" id="Sks-85-ThE"/>
+                            <constraint firstItem="g9V-Ww-Cj5" firstAttribute="top" secondItem="ile-k3-VRS" secondAttribute="top" constant="72" id="Ygq-mL-abM"/>
+                            <constraint firstItem="g9V-Ww-Cj5" firstAttribute="leading" secondItem="ile-k3-VRS" secondAttribute="leading" constant="8" id="dVd-Jn-psX"/>
+                            <constraint firstItem="38y-UD-qht" firstAttribute="leading" secondItem="ile-k3-VRS" secondAttribute="leading" constant="16" id="eBw-sT-sG3"/>
+                            <constraint firstItem="ile-k3-VRS" firstAttribute="trailing" secondItem="g9V-Ww-Cj5" secondAttribute="trailing" constant="8" id="j9Q-BG-Nzq"/>
+                            <constraint firstItem="ile-k3-VRS" firstAttribute="bottom" secondItem="g9V-Ww-Cj5" secondAttribute="bottom" constant="72" id="maM-n8-U4J"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Model" id="RNZ-H2-Exz"/>
+                    <connections>
+                        <outlet property="carModelsPickerView" destination="g9V-Ww-Cj5" id="5AC-0R-81E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lwz-xm-TnB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3206" y="-312"/>
+        </scene>
     </scenes>
     <resources>
         <image name="co2" width="12.5" height="12.5"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="paw" width="12.5" height="12.5"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="sportive-car" width="12.5" height="12.5"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

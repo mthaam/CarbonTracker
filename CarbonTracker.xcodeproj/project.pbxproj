@@ -7,16 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47B1FE6F27926D3000B57ECD /* CarMakeServiceAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B1FE6E27926D3000B57ECD /* CarMakeServiceAF.swift */; };
+		60B715F00D6ADBDC661F5C10 /* Pods_CarbonTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600E3F5F6F29F0D8039EA936 /* Pods_CarbonTrackerTests.framework */; };
+		8629DDC22794839300E3F644 /* CarMakeServiceAFTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629DDC12794839300E3F644 /* CarMakeServiceAFTestCase.swift */; };
+		8629DDC4279483E100E3F644 /* AlamofireMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629DDC3279483E100E3F644 /* AlamofireMock.swift */; };
+		8629DDC6279484D300E3F644 /* CarMakeServiceCorrectJsonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8629DDC5279484D300E3F644 /* CarMakeServiceCorrectJsonData.json */; };
+		8629DDC8279485B400E3F644 /* CarMakeServiceBadJsonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8629DDC7279485B400E3F644 /* CarMakeServiceBadJsonData.json */; };
+		8629DDCA2794861300E3F644 /* CarMakesFakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629DDC92794861300E3F644 /* CarMakesFakeResponseData.swift */; };
+		8629DDCC2794876200E3F644 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629DDCB2794876200E3F644 /* NetworkErrors.swift */; };
+		8629DDD02795F4EF00E3F644 /* CarModelServiceAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629DDCF2795F4EF00E3F644 /* CarModelServiceAF.swift */; };
+		8629DDD22795F50300E3F644 /* CarModelsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629DDD12795F50300E3F644 /* CarModelsData.swift */; };
+		8629DDD52795FF5200E3F644 /* CarModelsServiceAFTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629DDD42795FF5200E3F644 /* CarModelsServiceAFTestCase.swift */; };
+		8629DDD82795FFAB00E3F644 /* CarModelsFakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629DDD72795FFAB00E3F644 /* CarModelsFakeResponseData.swift */; };
+		8629DDDA2795FFEC00E3F644 /* CarModelsCorrectData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8629DDD92795FFEC00E3F644 /* CarModelsCorrectData.json */; };
+		8629DDDC2796001200E3F644 /* CarModelsIncorrectData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8629DDDB2796001200E3F644 /* CarModelsIncorrectData.json */; };
 		86D1C1A62791F1A7008B50B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1A52791F1A7008B50B0 /* AppDelegate.swift */; };
 		86D1C1A82791F1A7008B50B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1A72791F1A7008B50B0 /* SceneDelegate.swift */; };
-		86D1C1AA2791F1A7008B50B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1A92791F1A7008B50B0 /* ViewController.swift */; };
 		86D1C1AD2791F1A7008B50B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D1C1AB2791F1A7008B50B0 /* Main.storyboard */; };
 		86D1C1B02791F1A7008B50B0 /* CarbonTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1AE2791F1A7008B50B0 /* CarbonTracker.xcdatamodeld */; };
 		86D1C1B22791F1AB008B50B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D1C1B12791F1AB008B50B0 /* Assets.xcassets */; };
 		86D1C1B52791F1AB008B50B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D1C1B32791F1AB008B50B0 /* LaunchScreen.storyboard */; };
-		86D1C1C02791F1AB008B50B0 /* CarbonTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1BF2791F1AB008B50B0 /* CarbonTrackerTests.swift */; };
 		86D1C1CA2791F1AB008B50B0 /* CarbonTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1C92791F1AB008B50B0 /* CarbonTrackerUITests.swift */; };
 		86D1C1CC2791F1AB008B50B0 /* CarbonTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1CB2791F1AB008B50B0 /* CarbonTrackerUITestsLaunchTests.swift */; };
+		86D1C1E027920FC5008B50B0 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1DF27920FC5008B50B0 /* APIKeys.swift */; };
+		86D1C1E42792189C008B50B0 /* MyCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1E32792189C008B50B0 /* MyCarViewController.swift */; };
+		86D1C1E727933769008B50B0 /* AlamofireSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1E627933769008B50B0 /* AlamofireSessionProtocol.swift */; };
+		86D1C1EA279337BA008B50B0 /* CarbonSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1E9279337BA008B50B0 /* CarbonSession.swift */; };
+		86D1C1ED279349AD008B50B0 /* FootprintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1EC279349AD008B50B0 /* FootprintsViewController.swift */; };
+		86D1C1F027934A0B008B50B0 /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1EF27934A0B008B50B0 /* CountViewController.swift */; };
+		86D1C1F327935031008B50B0 /* AddNewCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1F227935031008B50B0 /* AddNewCarViewController.swift */; };
+		86D1C1F527935796008B50B0 /* SelectMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1F427935796008B50B0 /* SelectMakeViewController.swift */; };
+		86D1C1F727935AA2008B50B0 /* SelectModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1F627935AA2008B50B0 /* SelectModelViewController.swift */; };
+		86D1C1F927935FD5008B50B0 /* CarMakesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1F827935FD5008B50B0 /* CarMakesData.swift */; };
+		EBC7585EC3274C2568B912CB /* Pods_CarbonTracker_CarbonTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F82C253CC1AE12FBDF64F3 /* Pods_CarbonTracker_CarbonTrackerUITests.framework */; };
+		F97B99B7E78B99DA41B11F1F /* Pods_CarbonTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CFB3C5E723624B28C0AB9 /* Pods_CarbonTracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,20 +61,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D7CFB3C5E723624B28C0AB9 /* Pods_CarbonTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E5D544A833157E601A7D2DF /* Pods-CarbonTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTracker.debug.xcconfig"; path = "Target Support Files/Pods-CarbonTracker/Pods-CarbonTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		47B1FE6E27926D3000B57ECD /* CarMakeServiceAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakeServiceAF.swift; sourceTree = "<group>"; };
+		600E3F5F6F29F0D8039EA936 /* Pods_CarbonTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70F82C253CC1AE12FBDF64F3 /* Pods_CarbonTracker_CarbonTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonTracker_CarbonTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72C718944DDAC18DA7EE7492 /* Pods-CarbonTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTracker.release.xcconfig"; path = "Target Support Files/Pods-CarbonTracker/Pods-CarbonTracker.release.xcconfig"; sourceTree = "<group>"; };
+		80A1DD18F887DF9F218DB1DC /* Pods-CarbonTracker-CarbonTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTracker-CarbonTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-CarbonTracker-CarbonTrackerUITests/Pods-CarbonTracker-CarbonTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8629DDC12794839300E3F644 /* CarMakeServiceAFTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakeServiceAFTestCase.swift; sourceTree = "<group>"; };
+		8629DDC3279483E100E3F644 /* AlamofireMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireMock.swift; sourceTree = "<group>"; };
+		8629DDC5279484D300E3F644 /* CarMakeServiceCorrectJsonData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CarMakeServiceCorrectJsonData.json; sourceTree = "<group>"; };
+		8629DDC7279485B400E3F644 /* CarMakeServiceBadJsonData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CarMakeServiceBadJsonData.json; sourceTree = "<group>"; };
+		8629DDC92794861300E3F644 /* CarMakesFakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakesFakeResponseData.swift; sourceTree = "<group>"; };
+		8629DDCB2794876200E3F644 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		8629DDCF2795F4EF00E3F644 /* CarModelServiceAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelServiceAF.swift; sourceTree = "<group>"; };
+		8629DDD12795F50300E3F644 /* CarModelsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelsData.swift; sourceTree = "<group>"; };
+		8629DDD42795FF5200E3F644 /* CarModelsServiceAFTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelsServiceAFTestCase.swift; sourceTree = "<group>"; };
+		8629DDD72795FFAB00E3F644 /* CarModelsFakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarModelsFakeResponseData.swift; path = CarbonTrackerTests/CarModelsFakeResponseData.swift; sourceTree = SOURCE_ROOT; };
+		8629DDD92795FFEC00E3F644 /* CarModelsCorrectData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = CarModelsCorrectData.json; path = CarbonTrackerTests/CarModelsCorrectData.json; sourceTree = SOURCE_ROOT; };
+		8629DDDB2796001200E3F644 /* CarModelsIncorrectData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = CarModelsIncorrectData.json; path = CarbonTrackerTests/CarModelsIncorrectData.json; sourceTree = SOURCE_ROOT; };
 		86D1C1A22791F1A7008B50B0 /* CarbonTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D1C1A52791F1A7008B50B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86D1C1A72791F1A7008B50B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		86D1C1A92791F1A7008B50B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		86D1C1AC2791F1A7008B50B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86D1C1AF2791F1A7008B50B0 /* CarbonTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarbonTracker.xcdatamodel; sourceTree = "<group>"; };
 		86D1C1B12791F1AB008B50B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86D1C1B42791F1AB008B50B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86D1C1B62791F1AB008B50B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86D1C1BB2791F1AB008B50B0 /* CarbonTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarbonTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		86D1C1BF2791F1AB008B50B0 /* CarbonTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonTrackerTests.swift; sourceTree = "<group>"; };
 		86D1C1C52791F1AB008B50B0 /* CarbonTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarbonTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D1C1C92791F1AB008B50B0 /* CarbonTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonTrackerUITests.swift; sourceTree = "<group>"; };
 		86D1C1CB2791F1AB008B50B0 /* CarbonTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		86D1C1DF27920FC5008B50B0 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		86D1C1E32792189C008B50B0 /* MyCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarViewController.swift; sourceTree = "<group>"; };
+		86D1C1E627933769008B50B0 /* AlamofireSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireSessionProtocol.swift; sourceTree = "<group>"; };
+		86D1C1E9279337BA008B50B0 /* CarbonSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonSession.swift; sourceTree = "<group>"; };
+		86D1C1EC279349AD008B50B0 /* FootprintsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsViewController.swift; sourceTree = "<group>"; };
+		86D1C1EF27934A0B008B50B0 /* CountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountViewController.swift; sourceTree = "<group>"; };
+		86D1C1F227935031008B50B0 /* AddNewCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCarViewController.swift; sourceTree = "<group>"; };
+		86D1C1F427935796008B50B0 /* SelectMakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMakeViewController.swift; sourceTree = "<group>"; };
+		86D1C1F627935AA2008B50B0 /* SelectModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModelViewController.swift; sourceTree = "<group>"; };
+		86D1C1F827935FD5008B50B0 /* CarMakesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakesData.swift; sourceTree = "<group>"; };
+		A6827FF36C4E1F3DAEF4AB54 /* Pods-CarbonTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-CarbonTrackerTests/Pods-CarbonTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		AEB0427626A19A42A2F25F12 /* Pods-CarbonTracker-CarbonTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTracker-CarbonTrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-CarbonTracker-CarbonTrackerUITests/Pods-CarbonTracker-CarbonTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D1EA5D9C8B47FC4087C33197 /* Pods-CarbonTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-CarbonTrackerTests/Pods-CarbonTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97B99B7E78B99DA41B11F1F /* Pods_CarbonTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60B715F00D6ADBDC661F5C10 /* Pods_CarbonTrackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +128,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC7585EC3274C2568B912CB /* Pods_CarbonTracker_CarbonTrackerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8629DDC02794832800E3F644 /* CarMakeServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				8629DDC12794839300E3F644 /* CarMakeServiceAFTestCase.swift */,
+				8629DDC3279483E100E3F644 /* AlamofireMock.swift */,
+				8629DDC92794861300E3F644 /* CarMakesFakeResponseData.swift */,
+				8629DDC5279484D300E3F644 /* CarMakeServiceCorrectJsonData.json */,
+				8629DDC7279485B400E3F644 /* CarMakeServiceBadJsonData.json */,
+			);
+			path = CarMakeServiceTests;
+			sourceTree = "<group>";
+		};
+		8629DDCD2794876B00E3F644 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				8629DDCB2794876200E3F644 /* NetworkErrors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		8629DDCE2795F43A00E3F644 /* CarMake */ = {
+			isa = PBXGroup;
+			children = (
+				47B1FE6E27926D3000B57ECD /* CarMakeServiceAF.swift */,
+				86D1C1F827935FD5008B50B0 /* CarMakesData.swift */,
+			);
+			path = CarMake;
+			sourceTree = "<group>";
+		};
+		8629DDD32795F50900E3F644 /* CarModels */ = {
+			isa = PBXGroup;
+			children = (
+				8629DDCF2795F4EF00E3F644 /* CarModelServiceAF.swift */,
+				8629DDD12795F50300E3F644 /* CarModelsData.swift */,
+			);
+			path = CarModels;
+			sourceTree = "<group>";
+		};
+		8629DDD62795FF5F00E3F644 /* CarModelsServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				8629DDD42795FF5200E3F644 /* CarModelsServiceAFTestCase.swift */,
+				8629DDD72795FFAB00E3F644 /* CarModelsFakeResponseData.swift */,
+				8629DDD92795FFEC00E3F644 /* CarModelsCorrectData.json */,
+				8629DDDB2796001200E3F644 /* CarModelsIncorrectData.json */,
+			);
+			path = CarModelsServiceTests;
+			sourceTree = "<group>";
+		};
 		86D1C1992791F1A7008B50B0 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +191,8 @@
 				86D1C1BE2791F1AB008B50B0 /* CarbonTrackerTests */,
 				86D1C1C82791F1AB008B50B0 /* CarbonTrackerUITests */,
 				86D1C1A32791F1A7008B50B0 /* Products */,
+				95FA74D63D14772140CF3D25 /* Pods */,
+				C78F830BA42F8748E4933806 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,7 +223,8 @@
 		86D1C1BE2791F1AB008B50B0 /* CarbonTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				86D1C1BF2791F1AB008B50B0 /* CarbonTrackerTests.swift */,
+				8629DDD62795FF5F00E3F644 /* CarModelsServiceTests */,
+				8629DDC02794832800E3F644 /* CarMakeServiceTests */,
 			);
 			path = CarbonTrackerTests;
 			sourceTree = "<group>";
@@ -132,6 +241,8 @@
 		86D1C1D82791F1C7008B50B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				86D1C1DE27920F8D008B50B0 /* Networking */,
+				86D1C1E127920FD3008B50B0 /* Keys */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,7 +259,9 @@
 		86D1C1DA2791F1EB008B50B0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				86D1C1A92791F1A7008B50B0 /* ViewController.swift */,
+				86D1C1E5279218A8008B50B0 /* CarViewControllers */,
+				86D1C1EE279349BE008B50B0 /* Footprints */,
+				86D1C1F127934A0F008B50B0 /* Count */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,6 +275,100 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		86D1C1DE27920F8D008B50B0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				86D1C1E2279210BE008B50B0 /* Car */,
+				86D1C1E82793376F008B50B0 /* Protocol */,
+				86D1C1EB279337C8008B50B0 /* AlamofireSessions */,
+				8629DDCD2794876B00E3F644 /* Errors */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		86D1C1E127920FD3008B50B0 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				86D1C1DF27920FC5008B50B0 /* APIKeys.swift */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
+		86D1C1E2279210BE008B50B0 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				8629DDCE2795F43A00E3F644 /* CarMake */,
+				8629DDD32795F50900E3F644 /* CarModels */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		86D1C1E5279218A8008B50B0 /* CarViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				86D1C1E32792189C008B50B0 /* MyCarViewController.swift */,
+				86D1C1F227935031008B50B0 /* AddNewCarViewController.swift */,
+				86D1C1F427935796008B50B0 /* SelectMakeViewController.swift */,
+				86D1C1F627935AA2008B50B0 /* SelectModelViewController.swift */,
+			);
+			path = CarViewControllers;
+			sourceTree = "<group>";
+		};
+		86D1C1E82793376F008B50B0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				86D1C1E627933769008B50B0 /* AlamofireSessionProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		86D1C1EB279337C8008B50B0 /* AlamofireSessions */ = {
+			isa = PBXGroup;
+			children = (
+				86D1C1E9279337BA008B50B0 /* CarbonSession.swift */,
+			);
+			path = AlamofireSessions;
+			sourceTree = "<group>";
+		};
+		86D1C1EE279349BE008B50B0 /* Footprints */ = {
+			isa = PBXGroup;
+			children = (
+				86D1C1EC279349AD008B50B0 /* FootprintsViewController.swift */,
+			);
+			path = Footprints;
+			sourceTree = "<group>";
+		};
+		86D1C1F127934A0F008B50B0 /* Count */ = {
+			isa = PBXGroup;
+			children = (
+				86D1C1EF27934A0B008B50B0 /* CountViewController.swift */,
+			);
+			path = Count;
+			sourceTree = "<group>";
+		};
+		95FA74D63D14772140CF3D25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E5D544A833157E601A7D2DF /* Pods-CarbonTracker.debug.xcconfig */,
+				72C718944DDAC18DA7EE7492 /* Pods-CarbonTracker.release.xcconfig */,
+				80A1DD18F887DF9F218DB1DC /* Pods-CarbonTracker-CarbonTrackerUITests.debug.xcconfig */,
+				AEB0427626A19A42A2F25F12 /* Pods-CarbonTracker-CarbonTrackerUITests.release.xcconfig */,
+				D1EA5D9C8B47FC4087C33197 /* Pods-CarbonTrackerTests.debug.xcconfig */,
+				A6827FF36C4E1F3DAEF4AB54 /* Pods-CarbonTrackerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C78F830BA42F8748E4933806 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D7CFB3C5E723624B28C0AB9 /* Pods_CarbonTracker.framework */,
+				70F82C253CC1AE12FBDF64F3 /* Pods_CarbonTracker_CarbonTrackerUITests.framework */,
+				600E3F5F6F29F0D8039EA936 /* Pods_CarbonTrackerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,9 +376,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86D1C1CF2791F1AB008B50B0 /* Build configuration list for PBXNativeTarget "CarbonTracker" */;
 			buildPhases = (
+				8AB81DFE4E5728F04FD3809A /* [CP] Check Pods Manifest.lock */,
 				86D1C19E2791F1A7008B50B0 /* Sources */,
 				86D1C19F2791F1A7008B50B0 /* Frameworks */,
 				86D1C1A02791F1A7008B50B0 /* Resources */,
+				7F48869CED629D3EFD2D19CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,6 +395,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86D1C1D22791F1AB008B50B0 /* Build configuration list for PBXNativeTarget "CarbonTrackerTests" */;
 			buildPhases = (
+				7EDC6FB0FE045E87F6E25FF4 /* [CP] Check Pods Manifest.lock */,
 				86D1C1B72791F1AB008B50B0 /* Sources */,
 				86D1C1B82791F1AB008B50B0 /* Frameworks */,
 				86D1C1B92791F1AB008B50B0 /* Resources */,
@@ -204,9 +414,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86D1C1D52791F1AB008B50B0 /* Build configuration list for PBXNativeTarget "CarbonTrackerUITests" */;
 			buildPhases = (
+				6EB90BDA647A3C184140707A /* [CP] Check Pods Manifest.lock */,
 				86D1C1C12791F1AB008B50B0 /* Sources */,
 				86D1C1C22791F1AB008B50B0 /* Frameworks */,
 				86D1C1C32791F1AB008B50B0 /* Resources */,
+				A9E7A5313FB801C51B0C8A77 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +445,7 @@
 					};
 					86D1C1BA2791F1AB008B50B0 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = 86D1C1A12791F1A7008B50B0;
 					};
 					86D1C1C42791F1AB008B50B0 = {
@@ -276,6 +489,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8629DDC6279484D300E3F644 /* CarMakeServiceCorrectJsonData.json in Resources */,
+				8629DDC8279485B400E3F644 /* CarMakeServiceBadJsonData.json in Resources */,
+				8629DDDA2795FFEC00E3F644 /* CarModelsCorrectData.json in Resources */,
+				8629DDDC2796001200E3F644 /* CarModelsIncorrectData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,15 +505,131 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6EB90BDA647A3C184140707A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarbonTracker-CarbonTrackerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EDC6FB0FE045E87F6E25FF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarbonTrackerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F48869CED629D3EFD2D19CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarbonTracker/Pods-CarbonTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarbonTracker/Pods-CarbonTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarbonTracker/Pods-CarbonTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AB81DFE4E5728F04FD3809A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarbonTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9E7A5313FB801C51B0C8A77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarbonTracker-CarbonTrackerUITests/Pods-CarbonTracker-CarbonTrackerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarbonTracker-CarbonTrackerUITests/Pods-CarbonTracker-CarbonTrackerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarbonTracker-CarbonTrackerUITests/Pods-CarbonTracker-CarbonTrackerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		86D1C19E2791F1A7008B50B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86D1C1AA2791F1A7008B50B0 /* ViewController.swift in Sources */,
+				86D1C1E027920FC5008B50B0 /* APIKeys.swift in Sources */,
+				8629DDD02795F4EF00E3F644 /* CarModelServiceAF.swift in Sources */,
+				86D1C1F727935AA2008B50B0 /* SelectModelViewController.swift in Sources */,
+				8629DDCC2794876200E3F644 /* NetworkErrors.swift in Sources */,
+				86D1C1E42792189C008B50B0 /* MyCarViewController.swift in Sources */,
+				86D1C1F527935796008B50B0 /* SelectMakeViewController.swift in Sources */,
 				86D1C1A62791F1A7008B50B0 /* AppDelegate.swift in Sources */,
+				47B1FE6F27926D3000B57ECD /* CarMakeServiceAF.swift in Sources */,
+				86D1C1F327935031008B50B0 /* AddNewCarViewController.swift in Sources */,
+				86D1C1F027934A0B008B50B0 /* CountViewController.swift in Sources */,
+				86D1C1F927935FD5008B50B0 /* CarMakesData.swift in Sources */,
+				86D1C1E727933769008B50B0 /* AlamofireSessionProtocol.swift in Sources */,
+				8629DDD22795F50300E3F644 /* CarModelsData.swift in Sources */,
 				86D1C1A82791F1A7008B50B0 /* SceneDelegate.swift in Sources */,
+				86D1C1ED279349AD008B50B0 /* FootprintsViewController.swift in Sources */,
 				86D1C1B02791F1A7008B50B0 /* CarbonTracker.xcdatamodeld in Sources */,
+				86D1C1EA279337BA008B50B0 /* CarbonSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +637,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86D1C1C02791F1AB008B50B0 /* CarbonTrackerTests.swift in Sources */,
+				8629DDC4279483E100E3F644 /* AlamofireMock.swift in Sources */,
+				8629DDD82795FFAB00E3F644 /* CarModelsFakeResponseData.swift in Sources */,
+				8629DDC22794839300E3F644 /* CarMakeServiceAFTestCase.swift in Sources */,
+				8629DDD52795FF5200E3F644 /* CarModelsServiceAFTestCase.swift in Sources */,
+				8629DDCA2794861300E3F644 /* CarMakesFakeResponseData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +807,7 @@
 		};
 		86D1C1D02791F1AB008B50B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E5D544A833157E601A7D2DF /* Pods-CarbonTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -481,6 +819,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -498,6 +837,7 @@
 		};
 		86D1C1D12791F1AB008B50B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72C718944DDAC18DA7EE7492 /* Pods-CarbonTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -509,6 +849,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -526,18 +867,26 @@
 		};
 		86D1C1D32791F1AB008B50B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1EA5D9C8B47FC4087C33197 /* Pods-CarbonTrackerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F8P949KQY4;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JSB.CarbonTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarbonTracker.app/CarbonTracker";
@@ -546,14 +895,21 @@
 		};
 		86D1C1D42791F1AB008B50B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6827FF36C4E1F3DAEF4AB54 /* Pods-CarbonTrackerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F8P949KQY4;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JSB.CarbonTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -566,6 +922,7 @@
 		};
 		86D1C1D62791F1AB008B50B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80A1DD18F887DF9F218DB1DC /* Pods-CarbonTracker-CarbonTrackerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -584,6 +941,7 @@
 		};
 		86D1C1D72791F1AB008B50B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEB0427626A19A42A2F25F12 /* Pods-CarbonTracker-CarbonTrackerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
