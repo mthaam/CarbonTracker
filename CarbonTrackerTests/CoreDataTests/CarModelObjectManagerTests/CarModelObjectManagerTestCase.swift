@@ -63,4 +63,71 @@ class CarModelObjectManagerTestCase: XCTestCase {
         XCTAssertEqual(carModelManager.all[1].isCurrentCar, false)
         XCTAssertEqual(carModelManager.all[0].isCurrentCar, false)
     }
+    
+    func testGivenCoreDataContains3Objects_WhenFetchingUsersFavCar_FavouriteCarShouldBeFerrariF50() {
+        carModelManager.saveCarModel(with: SampleCarModelObjects.f50) { success in
+            XCTAssertTrue(success)
+        }
+        carModelManager.saveCarModel(with: SampleCarModelObjects.maranello) { success in
+            XCTAssertTrue(success)
+        }
+        carModelManager.saveCarModel(with: SampleCarModelObjects.modena) { success in
+            XCTAssertTrue(success)
+        }
+        carModelManager.updateFavouriteCar(with: SampleCarModelObjects.f50) { success in
+            XCTAssertTrue(success)
+        }
+
+        let favCar = carModelManager.fetchFavouriteCar()
+        guard let car = favCar else { return }
+
+        XCTAssertEqual(car.attributes.name, "Ferrari F50")
+    }
+    
+    func testGivenCoreDataContains3Objects_WhenFetchingFavCarWhileNoCarIsFav_FetchFavouriteFunctionShouldReturnNil() {
+        carModelManager.saveCarModel(with: SampleCarModelObjects.f50) { success in
+            XCTAssertTrue(success)
+        }
+        carModelManager.saveCarModel(with: SampleCarModelObjects.maranello) { success in
+            XCTAssertTrue(success)
+        }
+        carModelManager.saveCarModel(with: SampleCarModelObjects.modena) { success in
+            XCTAssertTrue(success)
+        }
+
+        for car in carModelManager.all {
+            car.isCurrentCar = false
+            try? carModelManager.carbonTrackerContext.save()
+        }
+        let favCar = carModelManager.fetchFavouriteCar()
+
+        XCTAssertNil(favCar)
+    }
+    
+    func testGivenCoreDataContains1FavCar_WhenCheckingIfThisCarIsFav_TrueShouldBeReturned() {
+        carModelManager.saveCarModel(with: SampleCarModelObjects.f50) { success in
+            XCTAssertTrue(success)
+        }
+        carModelManager.updateFavouriteCar(with: SampleCarModelObjects.f50) { success in
+            XCTAssertTrue(success)
+        }
+        
+        let isFavourite = carModelManager.isCarFavourite(with: SampleCarModelObjects.f50.data)
+        XCTAssertTrue(isFavourite)
+    }
+    
+    func testGivenCoreDataContains1FavCarOutof2cars_WhenCheckingIfThisCarIsFavWhileItsActuallyNot_FalseShouldBeReturned() {
+        carModelManager.saveCarModel(with: SampleCarModelObjects.f50) { success in
+            XCTAssertTrue(success)
+        }
+        carModelManager.saveCarModel(with: SampleCarModelObjects.modena) { success in
+            XCTAssertTrue(success)
+        }
+        carModelManager.updateFavouriteCar(with: SampleCarModelObjects.modena) { success in
+            XCTAssertTrue(success)
+        }
+        
+        let isFavourite = carModelManager.isCarFavourite(with: SampleCarModelObjects.f50.data)
+        XCTAssertFalse(isFavourite)
+    }
 }

@@ -44,6 +44,7 @@
 		86D1C1F527935796008B50B0 /* SelectMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1F427935796008B50B0 /* SelectMakeViewController.swift */; };
 		86D1C1F727935AA2008B50B0 /* SelectModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1F627935AA2008B50B0 /* SelectModelViewController.swift */; };
 		86D1C1F927935FD5008B50B0 /* CarMakesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1F827935FD5008B50B0 /* CarMakesData.swift */; };
+		86D6090C2799F48A00E3E999 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6090B2799F48A00E3E999 /* CarTableViewCell.swift */; };
 		EBC7585EC3274C2568B912CB /* Pods_CarbonTracker_CarbonTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F82C253CC1AE12FBDF64F3 /* Pods_CarbonTracker_CarbonTrackerUITests.framework */; };
 		F97B99B7E78B99DA41B11F1F /* Pods_CarbonTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CFB3C5E723624B28C0AB9 /* Pods_CarbonTracker.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		86D1C1F427935796008B50B0 /* SelectMakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMakeViewController.swift; sourceTree = "<group>"; };
 		86D1C1F627935AA2008B50B0 /* SelectModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModelViewController.swift; sourceTree = "<group>"; };
 		86D1C1F827935FD5008B50B0 /* CarMakesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakesData.swift; sourceTree = "<group>"; };
+		86D6090B2799F48A00E3E999 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		A6827FF36C4E1F3DAEF4AB54 /* Pods-CarbonTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-CarbonTrackerTests/Pods-CarbonTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		AEB0427626A19A42A2F25F12 /* Pods-CarbonTracker-CarbonTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTracker-CarbonTrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-CarbonTracker-CarbonTrackerUITests/Pods-CarbonTracker-CarbonTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D1EA5D9C8B47FC4087C33197 /* Pods-CarbonTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-CarbonTrackerTests/Pods-CarbonTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +224,14 @@
 			path = CarModelObjectManagerTests;
 			sourceTree = "<group>";
 		};
+		863B2F112799FBC200FD27BB /* TableVIewCells */ = {
+			isa = PBXGroup;
+			children = (
+				86D6090B2799F48A00E3E999 /* CarTableViewCell.swift */,
+			);
+			path = TableVIewCells;
+			sourceTree = "<group>";
+		};
 		86D1C1992791F1A7008B50B0 = {
 			isa = PBXGroup;
 			children = (
@@ -289,8 +299,8 @@
 		86D1C1D92791F1D3008B50B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				86D1C1B32791F1AB008B50B0 /* LaunchScreen.storyboard */,
-				86D1C1AB2791F1A7008B50B0 /* Main.storyboard */,
+				86D6090A2799F41F00E3E999 /* Storyboards */,
+				863B2F112799FBC200FD27BB /* TableVIewCells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -383,6 +393,15 @@
 				86D1C1EF27934A0B008B50B0 /* CountViewController.swift */,
 			);
 			path = Count;
+			sourceTree = "<group>";
+		};
+		86D6090A2799F41F00E3E999 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				86D1C1B32791F1AB008B50B0 /* LaunchScreen.storyboard */,
+				86D1C1AB2791F1A7008B50B0 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		95FA74D63D14772140CF3D25 /* Pods */ = {
@@ -666,6 +685,7 @@
 				86D1C1F927935FD5008B50B0 /* CarMakesData.swift in Sources */,
 				86D1C1E727933769008B50B0 /* AlamofireSessionProtocol.swift in Sources */,
 				8629DDD22795F50300E3F644 /* CarModelsData.swift in Sources */,
+				86D6090C2799F48A00E3E999 /* CarTableViewCell.swift in Sources */,
 				86D1C1A82791F1A7008B50B0 /* SceneDelegate.swift in Sources */,
 				86D1C1ED279349AD008B50B0 /* FootprintsViewController.swift in Sources */,
 				86D1C1B02791F1A7008B50B0 /* CarbonTracker.xcdatamodeld in Sources */,

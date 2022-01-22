@@ -63,7 +63,6 @@ class CarModelServiceAF {
     private func getCarModelsURL(carMakeId: String) -> String {
         let url2ndPart = "\(carMakeId)/vehicle_models"
         let urlAsString = "\(CarModelServiceAF.baseCarModelsURLString)" + "\(url2ndPart)"
-        #warning("print")
         print(urlAsString)
         return urlAsString
     }

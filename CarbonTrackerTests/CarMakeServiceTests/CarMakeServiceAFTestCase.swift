@@ -25,5 +25,50 @@ class CarMakeServiceAFTestCase: XCTestCase {
         }
         wait(for: [expectation], timeout: 0.9)
     }
+    
+    func testGivenAttemptingToFetchCarMakes_WhenReceivingNoData_CompletionShouldPostFailure() {
+        let mockSession = MockCarMakeSession(mockResponse: MockResponse(response: CarMakesFakeResponseData.responseOK, data: nil))
+        let carModelsSession = CarMakeServiceAF(session: mockSession)
+        let expectation = XCTestExpectation(description: "Wait for Queue Change")
+        carModelsSession.fetchCarMakes() { result in
+            guard case .failure(let error) = result else {
+                XCTFail("Nothing failed in No Data test.")
+                return
+            }
+            XCTAssertNotNil(error)
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 0.9)
+    }
+    
+    func testGivenAttemptingToFetchCarModels_WhenReceivingIncorectData_CompletionShouldPostFailure() {
+        let mockSession = MockCarMakeSession(mockResponse: MockResponse(response: CarMakesFakeResponseData.responseOK, data: CarMakesFakeResponseData.carMakeIncorrectData))
+        let carMakesSession = CarMakeServiceAF(session: mockSession)
+        let expectation = XCTestExpectation(description: "Wait for Queue Change")
+        carMakesSession.fetchCarMakes() { result in
+            guard case .failure(let error) = result else {
+                XCTFail("Nothing failed in No Data test.")
+                return
+            }
+            XCTAssertNotNil(error)
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 0.9)
+    }
+
+    func testGivenAttemptingToFetchCarModels_WhenReceivingBadResponse_CompletionShouldPostFailure() {
+        let mockSession = MockCarMakeSession(mockResponse: MockResponse(response: CarMakesFakeResponseData.responseKO, data: CarModelsFakeResponseData.carModelIncorrectData))
+        let carMakesSession = CarMakeServiceAF(session: mockSession)
+        let expectation = XCTestExpectation(description: "Wait for Queue Change")
+        carMakesSession.fetchCarMakes() { result in
+            guard case .failure(let error) = result else {
+                XCTFail("Nothing failed in No Data test.")
+                return
+            }
+            XCTAssertNotNil(error)
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 0.9)
+    }
 
 }

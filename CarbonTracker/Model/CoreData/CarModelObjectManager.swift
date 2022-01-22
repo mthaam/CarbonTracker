@@ -91,4 +91,33 @@ final class CarModelObjectManager {
         completion(true)
     }
     
+    /// This function returns a single CarModel object stored in core data,
+    /// which is the user's car to be used later for
+    /// footprint calculations.
+    func fetchFavouriteCar() -> CarModels?  {
+        let request: NSFetchRequest<CarModelObject> = CarModelObject.fetchRequest()
+        request.predicate = NSPredicate.init(format: "isCurrentCar == %@", NSNumber(value: true))
+        guard let favCars = try? carbonTrackerContext.fetch(request) else { return nil }
+        guard let car = favCars.first else { return nil }
+        var carModel: CarModels?
+        if let id = car.id, let name = car.name, let make = car.vehicle_make {
+            carModel = CarModels(id: id, attributes: CarAttributes(name: name, year: Int(car.year), vehicle_make: make))
+        }
+        return carModel
+    }
+    
+    /// This function returns a boolean.
+    /// It checks if a given car is the current favourite car.
+    func isCarFavourite(with carModel: CarModels) -> Bool {
+        let request: NSFetchRequest<CarModelObject> = CarModelObject.fetchRequest()
+        request.predicate = NSPredicate.init(format: "isCurrentCar == %@", NSNumber(value: true))
+        guard let favCars = try? carbonTrackerContext.fetch(request) else { return false }
+        for favCar in favCars {
+            if favCar.id == carModel.id  {
+                return true
+            }
+        }
+        return false
+    }
+    
 }

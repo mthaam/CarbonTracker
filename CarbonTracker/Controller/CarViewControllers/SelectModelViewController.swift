@@ -7,12 +7,21 @@
 
 import UIKit
 
+// MARK: - CLASS
 class SelectModelViewController: UIViewController {
     
+    // MARK: - PROPERTIES AND OUTLETS
+    
     var carModels: [CarModelDatas]!
+    var coreDataManager = CarModelObjectManager.sharedCarModelObjectManager
     
     @IBOutlet weak var carModelsPickerView: UIPickerView!
 
+    // MARK: - @IBActions
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        saveCar()
+    }
 }
 
 // MARK: - FUNCTIONS OVERRIDES
@@ -25,6 +34,20 @@ extension SelectModelViewController {
         carModelsPickerView.dataSource = self
     }
     
+}
+
+// MARK: - FUNCTIONS
+
+extension SelectModelViewController {
+    
+    private func saveCar() {
+        let carToSave = carModels[carModelsPickerView.selectedRow(inComponent: 0)]
+        coreDataManager.saveCarModel(with: carToSave) { success in
+            self.coreDataManager.updateFavouriteCar(with: carToSave) { success in
+                performSegue(withIdentifier: "unwindSegueToMyCarVC", sender: nil)
+            }
+        }
+    }
 }
 
 extension SelectModelViewController: UIPickerViewDataSource {
