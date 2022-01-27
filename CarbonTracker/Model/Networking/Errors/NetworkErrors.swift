@@ -14,4 +14,5 @@ enum NetworkErrors: Error {
     case badResponse
     case unableToDecodeResponse
     case alamofireError(AFError)
+    case unableToFindLocation
 }
