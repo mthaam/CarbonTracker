@@ -1,0 +1,26 @@
+//
+//  CarbonFootprintSession.swift
+//  CarbonTracker
+//
+//  Created by JEAN SEBASTIEN BRUNET on 29/1/22.
+//
+
+import Foundation
+import Alamofire
+
+class CarbonFootprintAFSession: CarbonSession {
+    
+    override func request(with url: String, data: EncodableDataRequest? = nil, completion: @escaping (AFDataResponse<Any>) -> Void) {
+        let headers: HTTPHeaders = [
+            .authorization(bearerToken: "\(ApiKeys.carbonInterfaceKey)"),
+            .contentType("application/json")
+        ]
+        guard let encodedBody = data else {
+            completion(AFDataResponse(request: nil, response: nil, data: nil, metrics: nil, serializationDuration: 0.1, result: .failure(.explicitlyCancelled)))
+            return
+        }
+        AF.request(url, method: .post, parameters: encodedBody, encoder: JSONParameterEncoder.default, headers: headers, interceptor: nil, requestModifier: nil).responseJSON { responseData in
+            completion(responseData)
+        }
+    }
+}

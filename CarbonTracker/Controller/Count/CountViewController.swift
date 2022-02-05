@@ -15,6 +15,18 @@ class CountViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let car = CarModelObjectManager.sharedCarModelObjectManager.fetchFavouriteCar()
+        if let car = car {
+            print(car.id)
+            print(car.attributes.vehicle_make)
+            print(car.attributes.name)
+        }
+        
+    }
+    
 
     /*
     // MARK: - Navigation

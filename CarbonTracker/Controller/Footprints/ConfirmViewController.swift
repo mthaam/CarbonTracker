@@ -13,9 +13,13 @@ class ConfirmViewController: UIViewController {
     
     // MARK: - Properties
     var locations = LocationDatas.sharedLocations
-    var zeroPassengersOrSeats: Bool {
-        return steppersLabels[0].text != "0" && steppersLabels[1].text != "1"
+    var passengersOrSeatsNon0: Bool {
+        return steppersLabels[0].text != "0" && steppersLabels[1].text != "0"
     }
+    var coreDataManager = CarModelObjectManager.sharedCarModelObjectManager
+    var carModelToPrepareForSegue: CarModels!
+    var footprintToPrepareForSegue: CarbonFootprintObject!
+    var footprintHelper = FootprintCalculationsHelper()
     
     // MARK: - @IBOutlets
     @IBOutlet weak var darkGreenView: UIView!
@@ -43,6 +47,17 @@ extension ConfirmViewController {
         mapKitView.delegate = self
         toggleActivityIndicator(shown: true)
         createMapPath()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "segueToFooprintResult" {
+            let destinationVC = segue.destination as! FootprintResultViewController
+            destinationVC.car = carModelToPrepareForSegue
+            destinationVC.footprint = footprintToPrepareForSegue
+            destinationVC.passengersNumber = steppersLabels[0].text
+            destinationVC.seatsNumber = steppersLabels[1].text
+        }
     }
 }
 
@@ -94,7 +109,7 @@ extension ConfirmViewController {
             return }
         startingAdressLabel.text = "\(start.streetNumber), \(start.streetType) \(start.streetName), \(start.postCode), \(start.cityName), \(start.country)"
         destinationAdressLabel.text = "\(destination.streetNumber), \(destination.streetType) \(destination.streetName), \(destination.postCode), \(destination.cityName), \(destination.country)"
-        estimatedDistanceLabel.text = "-- km"
+        estimatedDistanceLabel.text = "-- "
     }
     
     /// This function sets increment/decrement
@@ -219,7 +234,7 @@ extension ConfirmViewController {
         formatter.usesGroupingSeparator = false
         formatter.maximumFractionDigits = 1
         let doubleAsString =  formatter.string(from: NSNumber(value: value))!
-        estimatedDistanceLabel.text = "\(doubleAsString) km"
+        estimatedDistanceLabel.text = "\(doubleAsString)"
     }
     
     /// This function displays an alert to user.
@@ -236,8 +251,59 @@ extension ConfirmViewController {
         calculateButton.isHidden = shown
     }
     
+    /// This function calls Carbon API before
+    /// proceeding to next VC.
     private func proceedToNextVC() {
-        
+        toggleActivityIndicator(shown: true)
+        guard passengersOrSeatsNon0 else {
+            presentAlert(with: "You must have at least 1 passenger \nand 1 seat in your car.")
+            toggleActivityIndicator(shown: false)
+            return
+        }
+        guard passengersNmbrIsSmallerThanSeats() else {
+            presentAlert(with: "There are more passengers than seats in you car.")
+            toggleActivityIndicator(shown: false)
+            return
+        }
+        guard let car = fetchFavouriteCar() else {
+            presentAlert(with: "You don't have any favourite car, footprint calculation is not available.")
+            toggleActivityIndicator(shown: false)
+            return
+        }
+        guard let unwrappedDistance = estimatedDistanceLabel.text, let distanceValue = Double(unwrappedDistance) else {
+            toggleActivityIndicator(shown: false)
+            return
+        }
+        let encodableData = EncodableDataRequest(type: "vehicle", distance_unit: "km", distance_value: distanceValue, vehicle_model_id: car.id)
+        CarbonFootprintSessionAF.shared.fetchCarbonFootprint(withData: encodableData) { result in
+            self.toggleActivityIndicator(shown: false)
+            guard case .success(let data) = result else {
+                self.presentAlert(with: "Unable to perform calculation.")
+                return
+            }
+            self.footprintToPrepareForSegue = data
+            self.carModelToPrepareForSegue = car
+            self.performSegue(withIdentifier: "segueToFooprintResult", sender: nil)
+        }
+    }
+    
+    /// This function fetches current favourite car
+    /// if there is any.
+    private func fetchFavouriteCar() -> CarModels? {
+        let car = coreDataManager.fetchFavouriteCar()
+        return car
+    }
+    
+    /// This function verifies (by calling another function from model)
+    /// if the
+    private func passengersNmbrIsSmallerThanSeats() -> Bool {
+        let passengers = steppersLabels[0].text
+        let seats = steppersLabels[1].text
+        footprintHelper.verifySeatsEqualOrHigherThanPaxNmbr(withPaxNmbr: passengers, withSeatNmbr: seats)
+        if !footprintHelper.paxNmbrLessOrEqualSeats {
+            return false
+        }
+        return true
     }
 }
 

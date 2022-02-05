@@ -8,12 +8,12 @@
 import Foundation
 import Alamofire
 
-/// This class serves to call Api and
+/// This class is used to call Api and
 /// fetch car makes.
 /// - Note that var session conforms
 /// to AlamofireSession protocol for testing purposes.
 /// When used in production, session is initialized by
-/// default with RecipeSession, which uses the
+/// default with CarbonSession, which uses the
 /// real Alamofire.
 class CarModelServiceAF {
     static let shared = CarModelServiceAF()
@@ -31,7 +31,7 @@ class CarModelServiceAF {
     /// a result type depending on success/failure
     func fetchCarModels(with carMakeId: String, completion: @escaping (Result<[CarModelDatas], NetworkErrors>) -> Void) {
         let url = getCarModelsURL(carMakeId: carMakeId)
-        session.request(with: url) { response in
+        session.request(with: url, data: nil) { response in
             DispatchQueue.main.async {
                 guard let data = response.data, response.error == nil else {
                     print("error or no data")
@@ -63,7 +63,6 @@ class CarModelServiceAF {
     private func getCarModelsURL(carMakeId: String) -> String {
         let url2ndPart = "\(carMakeId)/vehicle_models"
         let urlAsString = "\(CarModelServiceAF.baseCarModelsURLString)" + "\(url2ndPart)"
-        print(urlAsString)
         return urlAsString
     }
 }

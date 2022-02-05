@@ -13,5 +13,5 @@ import Alamofire
 /// used in production, and a fake AF response when
 /// used for testing purpose.
 protocol AlamofireSession {
-    func request(with url: String, completion: @escaping (AFDataResponse<Any>) -> Void)
+    func request(with url: String, data: EncodableDataRequest?, completion: @escaping (AFDataResponse<Any>) -> Void)
 }

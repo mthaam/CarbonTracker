@@ -37,7 +37,7 @@ final class MockCarMakeSession: AlamofireSession {
     /// - Parameters:
     ///     - url: A string value.
     ///     - completion: a closure returning  an AFDataResponse type.
-    func request(with url: String, completion: @escaping (AFDataResponse<Any>) -> Void) {
+    func request(with url: String, data: EncodableDataRequest? = nil, completion: @escaping (AFDataResponse<Any>) -> Void) {
         let dataResponse = AFDataResponse<Any>(request: nil, response: mockResponse.response, data: mockResponse.data, metrics: nil, serializationDuration: 0, result: .success("OK"))
         completion(dataResponse)
     }

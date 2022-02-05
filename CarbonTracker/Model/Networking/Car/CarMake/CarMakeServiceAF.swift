@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-/// This class serves to call Api and
+/// This class is used to call Api and
 /// fetch car makes.
 /// - Note that var session conforms
 /// to AlamofireSession protocol for testing purposes.
@@ -30,7 +30,7 @@ class CarMakeServiceAF {
     /// - Parameter completion : a closure returning
     /// a result type depending on success/failure
     func fetchCarMakes(completion: @escaping (Result<[CarMakesData], NetworkErrors>) -> Void) {
-        session.request(with: CarMakeServiceAF.baseCarMakesURLString) { response in
+        session.request(with: CarMakeServiceAF.baseCarMakesURLString, data: nil) { response in
             DispatchQueue.main.async {
                 guard let data = response.data, response.error == nil else {
                     print("error or no data")

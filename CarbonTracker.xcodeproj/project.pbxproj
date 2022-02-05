@@ -7,8 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4768DE4627A8CB5A00577A68 /* FootprintCdObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4768DE4527A8CB5A00577A68 /* FootprintCdObject.swift */; };
+		4768DE4827A8CB7800577A68 /* FootprintCdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4768DE4727A8CB7800577A68 /* FootprintCdManager.swift */; };
+		479681BE27AE0A1E002C6501 /* FootprintDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479681BD27AE0A1E002C6501 /* FootprintDetailViewController.swift */; };
+		47AAB8AF27ACBF3500910908 /* FootprintTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AAB8AE27ACBF3500910908 /* FootprintTableViewCell.swift */; };
 		47B1FE6F27926D3000B57ECD /* CarMakeServiceAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B1FE6E27926D3000B57ECD /* CarMakeServiceAF.swift */; };
 		60B715F00D6ADBDC661F5C10 /* Pods_CarbonTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600E3F5F6F29F0D8039EA936 /* Pods_CarbonTrackerTests.framework */; };
+		861C4D0327A7681B00D8E281 /* CountriesDataArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C4D0227A7681B00D8E281 /* CountriesDataArray.swift */; };
+		861C4D0627A9ACC100D8E281 /* FootprintCalculationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C4D0527A9ACC100D8E281 /* FootprintCalculationsManager.swift */; };
+		861C4D0927A9CAA000D8E281 /* FootprintCalculationHelperTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C4D0827A9CAA000D8E281 /* FootprintCalculationHelperTestCase.swift */; };
+		861C4D0C27AB129000D8E281 /* FootprintDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C4D0B27AB129000D8E281 /* FootprintDataObject.swift */; };
+		861C4D0E27AB20D000D8E281 /* FootprintCdManagerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C4D0D27AB20D000D8E281 /* FootprintCdManagerTestCase.swift */; };
+		861C4D1027AB210900D8E281 /* SampleFootprintDataObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C4D0F27AB210900D8E281 /* SampleFootprintDataObjects.swift */; };
 		8629DDC22794839300E3F644 /* CarMakeServiceAFTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629DDC12794839300E3F644 /* CarMakeServiceAFTestCase.swift */; };
 		8629DDC4279483E100E3F644 /* AlamofireMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629DDC3279483E100E3F644 /* AlamofireMock.swift */; };
 		8629DDC6279484D300E3F644 /* CarMakeServiceCorrectJsonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8629DDC5279484D300E3F644 /* CarMakeServiceCorrectJsonData.json */; };
@@ -31,6 +41,16 @@
 		862A9B77279DC93500D933FC /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A9B76279DC93500D933FC /* ConfirmViewController.swift */; };
 		862A9B79279F48A800D933FC /* MapLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A9B78279F48A800D933FC /* MapLocations.swift */; };
 		8633372A27A1AF6D00FFD719 /* LocationDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633372927A1AF6D00FFD719 /* LocationDatas.swift */; };
+		8633372C27A5948C00FFD719 /* CarbonFootprintAFSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633372B27A5948C00FFD719 /* CarbonFootprintAFSession.swift */; };
+		8633372F27A596D000FFD719 /* EncodableCarbonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633372E27A596D000FFD719 /* EncodableCarbonData.swift */; };
+		8633373127A59EF900FFD719 /* LocationDatasTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633373027A59EF900FFD719 /* LocationDatasTestCase.swift */; };
+		8633373427A5A2F800FFD719 /* DecodableCarbonFootprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633373327A5A2F800FFD719 /* DecodableCarbonFootprint.swift */; };
+		8633373627A5A52B00FFD719 /* CarbonFootprintSessionAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633373527A5A52B00FFD719 /* CarbonFootprintSessionAF.swift */; };
+		8633373827A5AE5900FFD719 /* CarbonFootprintSessionAFTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633373727A5AE5900FFD719 /* CarbonFootprintSessionAFTestCase.swift */; };
+		8633373B27A5AEB800FFD719 /* FootprintCorrectData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8633373A27A5AEB800FFD719 /* FootprintCorrectData.json */; };
+		8633373D27A5AFA000FFD719 /* FootprintFakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633373C27A5AFA000FFD719 /* FootprintFakeResponseData.swift */; };
+		8633373F27A5B01500FFD719 /* FootprintIncorrectData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8633373E27A5B01500FFD719 /* FootprintIncorrectData.json */; };
+		869C284E27A5D4F700FD829B /* FootprintResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C284D27A5D4F700FD829B /* FootprintResultViewController.swift */; };
 		86D1C1A62791F1A7008B50B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1A52791F1A7008B50B0 /* AppDelegate.swift */; };
 		86D1C1A82791F1A7008B50B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1A72791F1A7008B50B0 /* SceneDelegate.swift */; };
 		86D1C1AD2791F1A7008B50B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D1C1AB2791F1A7008B50B0 /* Main.storyboard */; };
@@ -74,11 +94,21 @@
 /* Begin PBXFileReference section */
 		1D7CFB3C5E723624B28C0AB9 /* Pods_CarbonTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5D544A833157E601A7D2DF /* Pods-CarbonTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTracker.debug.xcconfig"; path = "Target Support Files/Pods-CarbonTracker/Pods-CarbonTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		4768DE4527A8CB5A00577A68 /* FootprintCdObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintCdObject.swift; sourceTree = "<group>"; };
+		4768DE4727A8CB7800577A68 /* FootprintCdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintCdManager.swift; sourceTree = "<group>"; };
+		479681BD27AE0A1E002C6501 /* FootprintDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintDetailViewController.swift; sourceTree = "<group>"; };
+		47AAB8AE27ACBF3500910908 /* FootprintTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintTableViewCell.swift; sourceTree = "<group>"; };
 		47B1FE6E27926D3000B57ECD /* CarMakeServiceAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakeServiceAF.swift; sourceTree = "<group>"; };
 		600E3F5F6F29F0D8039EA936 /* Pods_CarbonTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F82C253CC1AE12FBDF64F3 /* Pods_CarbonTracker_CarbonTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonTracker_CarbonTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C718944DDAC18DA7EE7492 /* Pods-CarbonTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTracker.release.xcconfig"; path = "Target Support Files/Pods-CarbonTracker/Pods-CarbonTracker.release.xcconfig"; sourceTree = "<group>"; };
 		80A1DD18F887DF9F218DB1DC /* Pods-CarbonTracker-CarbonTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTracker-CarbonTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-CarbonTracker-CarbonTrackerUITests/Pods-CarbonTracker-CarbonTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		861C4D0227A7681B00D8E281 /* CountriesDataArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesDataArray.swift; sourceTree = "<group>"; };
+		861C4D0527A9ACC100D8E281 /* FootprintCalculationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintCalculationsManager.swift; sourceTree = "<group>"; };
+		861C4D0827A9CAA000D8E281 /* FootprintCalculationHelperTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintCalculationHelperTestCase.swift; sourceTree = "<group>"; };
+		861C4D0B27AB129000D8E281 /* FootprintDataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintDataObject.swift; sourceTree = "<group>"; };
+		861C4D0D27AB20D000D8E281 /* FootprintCdManagerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintCdManagerTestCase.swift; sourceTree = "<group>"; };
+		861C4D0F27AB210900D8E281 /* SampleFootprintDataObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFootprintDataObjects.swift; sourceTree = "<group>"; };
 		8629DDC12794839300E3F644 /* CarMakeServiceAFTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakeServiceAFTestCase.swift; sourceTree = "<group>"; };
 		8629DDC3279483E100E3F644 /* AlamofireMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireMock.swift; sourceTree = "<group>"; };
 		8629DDC5279484D300E3F644 /* CarMakeServiceCorrectJsonData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CarMakeServiceCorrectJsonData.json; sourceTree = "<group>"; };
@@ -101,6 +131,16 @@
 		862A9B76279DC93500D933FC /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		862A9B78279F48A800D933FC /* MapLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocations.swift; sourceTree = "<group>"; };
 		8633372927A1AF6D00FFD719 /* LocationDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDatas.swift; sourceTree = "<group>"; };
+		8633372B27A5948C00FFD719 /* CarbonFootprintAFSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonFootprintAFSession.swift; sourceTree = "<group>"; };
+		8633372E27A596D000FFD719 /* EncodableCarbonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableCarbonData.swift; sourceTree = "<group>"; };
+		8633373027A59EF900FFD719 /* LocationDatasTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDatasTestCase.swift; sourceTree = "<group>"; };
+		8633373327A5A2F800FFD719 /* DecodableCarbonFootprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableCarbonFootprint.swift; sourceTree = "<group>"; };
+		8633373527A5A52B00FFD719 /* CarbonFootprintSessionAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonFootprintSessionAF.swift; sourceTree = "<group>"; };
+		8633373727A5AE5900FFD719 /* CarbonFootprintSessionAFTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonFootprintSessionAFTestCase.swift; sourceTree = "<group>"; };
+		8633373A27A5AEB800FFD719 /* FootprintCorrectData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FootprintCorrectData.json; sourceTree = "<group>"; };
+		8633373C27A5AFA000FFD719 /* FootprintFakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintFakeResponseData.swift; sourceTree = "<group>"; };
+		8633373E27A5B01500FFD719 /* FootprintIncorrectData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FootprintIncorrectData.json; sourceTree = "<group>"; };
+		869C284D27A5D4F700FD829B /* FootprintResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintResultViewController.swift; sourceTree = "<group>"; };
 		86D1C1A22791F1A7008B50B0 /* CarbonTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D1C1A52791F1A7008B50B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86D1C1A72791F1A7008B50B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +197,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4768DE4427A8CB3000577A68 /* CarModel */ = {
+			isa = PBXGroup;
+			children = (
+				8629DDDE2796C5B200E3F644 /* CarModelObject.swift */,
+				8629DDE02796C6B400E3F644 /* CarModelObjectManager.swift */,
+			);
+			path = CarModel;
+			sourceTree = "<group>";
+		};
+		4768DE4927A8CB8300577A68 /* Fooprint */ = {
+			isa = PBXGroup;
+			children = (
+				4768DE4527A8CB5A00577A68 /* FootprintCdObject.swift */,
+				4768DE4727A8CB7800577A68 /* FootprintCdManager.swift */,
+				861C4D0B27AB129000D8E281 /* FootprintDataObject.swift */,
+			);
+			path = Fooprint;
+			sourceTree = "<group>";
+		};
+		861C4D0427A7682A00D8E281 /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				861C4D0227A7681B00D8E281 /* CountriesDataArray.swift */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		861C4D0727A9ACFC00D8E281 /* Footprint calculations */ = {
+			isa = PBXGroup;
+			children = (
+				861C4D0527A9ACC100D8E281 /* FootprintCalculationsManager.swift */,
+			);
+			path = "Footprint calculations";
+			sourceTree = "<group>";
+		};
+		861C4D0A27A9CAA700D8E281 /* FootprintModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				861C4D0827A9CAA000D8E281 /* FootprintCalculationHelperTestCase.swift */,
+			);
+			path = FootprintModelTests;
+			sourceTree = "<group>";
+		};
+		861C4D1127AB211000D8E281 /* FootprintsCdManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				861C4D0D27AB20D000D8E281 /* FootprintCdManagerTestCase.swift */,
+				861C4D0F27AB210900D8E281 /* SampleFootprintDataObjects.swift */,
+			);
+			path = FootprintsCdManagerTests;
+			sourceTree = "<group>";
+		};
 		8629DDC02794832800E3F644 /* CarMakeServiceTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,8 +302,8 @@
 			isa = PBXGroup;
 			children = (
 				86D1C1AE2791F1A7008B50B0 /* CarbonTracker.xcdatamodeld */,
-				8629DDDE2796C5B200E3F644 /* CarModelObject.swift */,
-				8629DDE02796C6B400E3F644 /* CarModelObjectManager.swift */,
+				4768DE4927A8CB8300577A68 /* Fooprint */,
+				4768DE4427A8CB3000577A68 /* CarModel */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -221,6 +313,7 @@
 			children = (
 				8629DDE3279736E600E3F644 /* TestingFakePersistentContainer.swift */,
 				8629DDE927973C5A00E3F644 /* CarModelObjectManagerTests */,
+				861C4D1127AB211000D8E281 /* FootprintsCdManagerTests */,
 			);
 			path = CoreDataTests;
 			sourceTree = "<group>";
@@ -243,10 +336,40 @@
 			path = MapDatas;
 			sourceTree = "<group>";
 		};
+		8633372D27A5967D00FFD719 /* CarbonFootprintSession */ = {
+			isa = PBXGroup;
+			children = (
+				8633373327A5A2F800FFD719 /* DecodableCarbonFootprint.swift */,
+				8633373527A5A52B00FFD719 /* CarbonFootprintSessionAF.swift */,
+				8633372E27A596D000FFD719 /* EncodableCarbonData.swift */,
+			);
+			path = CarbonFootprintSession;
+			sourceTree = "<group>";
+		};
+		8633373227A59F0100FFD719 /* LocationDatasTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				8633373027A59EF900FFD719 /* LocationDatasTestCase.swift */,
+			);
+			path = LocationDatasTestCase;
+			sourceTree = "<group>";
+		};
+		8633373927A5AE6000FFD719 /* FootprintServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				8633373727A5AE5900FFD719 /* CarbonFootprintSessionAFTestCase.swift */,
+				8633373C27A5AFA000FFD719 /* FootprintFakeResponseData.swift */,
+				8633373A27A5AEB800FFD719 /* FootprintCorrectData.json */,
+				8633373E27A5B01500FFD719 /* FootprintIncorrectData.json */,
+			);
+			path = FootprintServiceTests;
+			sourceTree = "<group>";
+		};
 		863B2F112799FBC200FD27BB /* TableVIewCells */ = {
 			isa = PBXGroup;
 			children = (
 				86D6090B2799F48A00E3E999 /* CarTableViewCell.swift */,
+				47AAB8AE27ACBF3500910908 /* FootprintTableViewCell.swift */,
 			);
 			path = TableVIewCells;
 			sourceTree = "<group>";
@@ -292,6 +415,9 @@
 				8629DDE22797366800E3F644 /* CoreDataTests */,
 				8629DDD62795FF5F00E3F644 /* CarModelsServiceTests */,
 				8629DDC02794832800E3F644 /* CarMakeServiceTests */,
+				8633373927A5AE6000FFD719 /* FootprintServiceTests */,
+				8633373227A59F0100FFD719 /* LocationDatasTestCase */,
+				861C4D0A27A9CAA700D8E281 /* FootprintModelTests */,
 			);
 			path = CarbonTrackerTests;
 			sourceTree = "<group>";
@@ -312,6 +438,8 @@
 				86D1C1DE27920F8D008B50B0 /* Networking */,
 				86D1C1E127920FD3008B50B0 /* Keys */,
 				862A9B7A279F48B400D933FC /* MapDatas */,
+				861C4D0427A7682A00D8E281 /* Countries */,
+				861C4D0727A9ACFC00D8E281 /* Footprint calculations */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,6 +478,7 @@
 				86D1C1E2279210BE008B50B0 /* Car */,
 				86D1C1E82793376F008B50B0 /* Protocol */,
 				86D1C1EB279337C8008B50B0 /* AlamofireSessions */,
+				8633372D27A5967D00FFD719 /* CarbonFootprintSession */,
 				8629DDCD2794876B00E3F644 /* Errors */,
 			);
 			path = Networking;
@@ -395,6 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				86D1C1E9279337BA008B50B0 /* CarbonSession.swift */,
+				8633372B27A5948C00FFD719 /* CarbonFootprintAFSession.swift */,
 			);
 			path = AlamofireSessions;
 			sourceTree = "<group>";
@@ -406,6 +536,8 @@
 				862A9B72279DC90F00D933FC /* StartingAdressViewController.swift */,
 				862A9B74279DC92400D933FC /* DestinationAdressViewController.swift */,
 				862A9B76279DC93500D933FC /* ConfirmViewController.swift */,
+				869C284D27A5D4F700FD829B /* FootprintResultViewController.swift */,
+				479681BD27AE0A1E002C6501 /* FootprintDetailViewController.swift */,
 			);
 			path = Footprints;
 			sourceTree = "<group>";
@@ -570,8 +702,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8633373F27A5B01500FFD719 /* FootprintIncorrectData.json in Resources */,
 				8629DDC6279484D300E3F644 /* CarMakeServiceCorrectJsonData.json in Resources */,
 				8629DDC8279485B400E3F644 /* CarMakeServiceBadJsonData.json in Resources */,
+				8633373B27A5AEB800FFD719 /* FootprintCorrectData.json in Resources */,
 				8629DDDA2795FFEC00E3F644 /* CarModelsCorrectData.json in Resources */,
 				8629DDDC2796001200E3F644 /* CarModelsIncorrectData.json in Resources */,
 			);
@@ -697,26 +831,38 @@
 				86D1C1E027920FC5008B50B0 /* APIKeys.swift in Sources */,
 				8629DDD02795F4EF00E3F644 /* CarModelServiceAF.swift in Sources */,
 				86D1C1F727935AA2008B50B0 /* SelectModelViewController.swift in Sources */,
+				8633372C27A5948C00FFD719 /* CarbonFootprintAFSession.swift in Sources */,
 				8629DDDF2796C5B200E3F644 /* CarModelObject.swift in Sources */,
 				8633372A27A1AF6D00FFD719 /* LocationDatas.swift in Sources */,
 				8629DDCC2794876200E3F644 /* NetworkErrors.swift in Sources */,
+				4768DE4827A8CB7800577A68 /* FootprintCdManager.swift in Sources */,
+				8633373627A5A52B00FFD719 /* CarbonFootprintSessionAF.swift in Sources */,
+				861C4D0327A7681B00D8E281 /* CountriesDataArray.swift in Sources */,
 				86D1C1E42792189C008B50B0 /* MyCarViewController.swift in Sources */,
+				861C4D0C27AB129000D8E281 /* FootprintDataObject.swift in Sources */,
 				86D1C1F527935796008B50B0 /* SelectMakeViewController.swift in Sources */,
 				862A9B77279DC93500D933FC /* ConfirmViewController.swift in Sources */,
 				86D1C1A62791F1A7008B50B0 /* AppDelegate.swift in Sources */,
 				47B1FE6F27926D3000B57ECD /* CarMakeServiceAF.swift in Sources */,
+				869C284E27A5D4F700FD829B /* FootprintResultViewController.swift in Sources */,
 				86D1C1F327935031008B50B0 /* AddNewCarViewController.swift in Sources */,
 				86D1C1F027934A0B008B50B0 /* CountViewController.swift in Sources */,
 				862A9B75279DC92400D933FC /* DestinationAdressViewController.swift in Sources */,
 				86D1C1F927935FD5008B50B0 /* CarMakesData.swift in Sources */,
 				86D1C1E727933769008B50B0 /* AlamofireSessionProtocol.swift in Sources */,
+				8633372F27A596D000FFD719 /* EncodableCarbonData.swift in Sources */,
+				47AAB8AF27ACBF3500910908 /* FootprintTableViewCell.swift in Sources */,
+				4768DE4627A8CB5A00577A68 /* FootprintCdObject.swift in Sources */,
+				861C4D0627A9ACC100D8E281 /* FootprintCalculationsManager.swift in Sources */,
 				8629DDD22795F50300E3F644 /* CarModelsData.swift in Sources */,
 				86D6090C2799F48A00E3E999 /* CarTableViewCell.swift in Sources */,
 				86D1C1A82791F1A7008B50B0 /* SceneDelegate.swift in Sources */,
+				8633373427A5A2F800FFD719 /* DecodableCarbonFootprint.swift in Sources */,
 				86D1C1ED279349AD008B50B0 /* FootprintsViewController.swift in Sources */,
 				86D1C1B02791F1A7008B50B0 /* CarbonTracker.xcdatamodeld in Sources */,
 				86D1C1EA279337BA008B50B0 /* CarbonSession.swift in Sources */,
 				8629DDE12796C6B400E3F644 /* CarModelObjectManager.swift in Sources */,
+				479681BE27AE0A1E002C6501 /* FootprintDetailViewController.swift in Sources */,
 				862A9B73279DC90F00D933FC /* StartingAdressViewController.swift in Sources */,
 				862A9B79279F48A800D933FC /* MapLocations.swift in Sources */,
 			);
@@ -727,13 +873,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8629DDC4279483E100E3F644 /* AlamofireMock.swift in Sources */,
+				8633373127A59EF900FFD719 /* LocationDatasTestCase.swift in Sources */,
+				8633373827A5AE5900FFD719 /* CarbonFootprintSessionAFTestCase.swift in Sources */,
 				8629DDE6279739A700E3F644 /* SampleCarModelObjects.swift in Sources */,
+				861C4D0E27AB20D000D8E281 /* FootprintCdManagerTestCase.swift in Sources */,
 				8629DDD82795FFAB00E3F644 /* CarModelsFakeResponseData.swift in Sources */,
 				8629DDE827973C5300E3F644 /* CarModelObjectManagerTestCase.swift in Sources */,
 				8629DDC22794839300E3F644 /* CarMakeServiceAFTestCase.swift in Sources */,
 				8629DDD52795FF5200E3F644 /* CarModelsServiceAFTestCase.swift in Sources */,
+				8633373D27A5AFA000FFD719 /* FootprintFakeResponseData.swift in Sources */,
+				861C4D1027AB210900D8E281 /* SampleFootprintDataObjects.swift in Sources */,
 				8629DDE4279736E600E3F644 /* TestingFakePersistentContainer.swift in Sources */,
 				8629DDCA2794861300E3F644 /* CarMakesFakeResponseData.swift in Sources */,
+				861C4D0927A9CAA000D8E281 /* FootprintCalculationHelperTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

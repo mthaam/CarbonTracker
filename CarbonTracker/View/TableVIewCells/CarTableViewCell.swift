@@ -41,12 +41,14 @@ class CarTableViewCell: UITableViewCell {
         coloredView.layer.cornerRadius = 10
     }
     
+    /// This function updates labels.
     func updateDisplay(with car: CarModels) {
         carMakeLabel.text = car.attributes.vehicle_make
         carModelLabel.text = "\(car.attributes.name)" + " (\(car.attributes.year))"
         updateImage()
     }
     
+    /// THis function updates image.
     private func updateImage() {
         let isCurrentCar = coreDataManager.isCarFavourite(with: carModel)
         if isCurrentCar {
@@ -54,6 +56,6 @@ class CarTableViewCell: UITableViewCell {
         } else {
             carImage.image = UIImage(imageLiteralResourceName: "carFromSide")
         }
-        
     }
+    
 }

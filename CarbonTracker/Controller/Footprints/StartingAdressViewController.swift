@@ -14,7 +14,7 @@ class StartingAdressViewController: UIViewController {
     @IBOutlet var adressTextFields: [UITextField]!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var nextButton: UIButton!
-    
+    @IBOutlet weak var countryPickerView: UIPickerView!
     
     // MARK: - Properties
 
@@ -25,6 +25,7 @@ extension StartingAdressViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegates()
+        countryPickerView.selectRow(62, inComponent: 0, animated: true)
         toggleActivityIndicator(shown: false)
     }
 }
@@ -37,7 +38,11 @@ extension StartingAdressViewController {
     @IBAction func nextButtonTapped(_ sender: Any) {
         proceedToNextVC()
     }
-    
+    @IBAction func didTappedMainView(_ sender: Any) {
+        for textField in adressTextFields {
+            textField.resignFirstResponder()
+        }
+    }
 }
 
 // MARK: - Functions
@@ -50,6 +55,8 @@ extension StartingAdressViewController {
             }
             textField.delegate = self
         }
+        countryPickerView.delegate = self
+        countryPickerView.dataSource = self
     }
     
     /// This function gathers all textfields information
@@ -59,24 +66,23 @@ extension StartingAdressViewController {
             presentAlert(with: "An information is missing. \nCheck fields before proceeding.")
             return
         }
-        guard let streetNbr = adressTextFields[0].text, let streetType = adressTextFields[1].text, let streetName = adressTextFields[2].text, let postCode = adressTextFields[3].text, let country = adressTextFields[4].text else {
+        guard let streetNbr = adressTextFields[0].text, let streetType = adressTextFields[1].text, let streetName = adressTextFields[2].text, let postCode = adressTextFields[3].text, let city = adressTextFields[4].text else {
             presentAlert(with: "Unable to decode this adress.")
         return
         }
+        let country = countryList[countryPickerView.selectedRow(inComponent: 0)]
         toggleActivityIndicator(shown: true)
         var concatenatedAdress = String()
-        concatenatedAdress = "\(streetNbr), \(streetType.capitalized) \(streetName.capitalized), \(postCode), \(country.capitalized)"
+        concatenatedAdress = "\(streetNbr), \(streetType.capitalized) \(streetName.capitalized), \(postCode), \(city.capitalized), "
         getCoordinatesFrom(concatenatedAdress) { placemark in
             self.toggleActivityIndicator(shown: false)
             guard case .success(let location) = placemark else {
                 self.presentAlert(with: "Unable to find coordinates for this location.")
                 return
             }
-            #warning("to be completed after interface update. city missing")
-            let locationToSend = Location(streetNumber: streetNbr, streetType: streetType.capitalized, streetName: streetName.capitalized, cityName: "Paris", postCode: postCode, country: country.capitalized, placemark: location)
+            let locationToSend = Location(streetNumber: streetNbr, streetType: streetType.capitalized, streetName: streetName.capitalized, cityName: city.capitalized, postCode: postCode, country: country.capitalized, placemark: location)
             LocationDatas.sharedLocations.startingPlacemark = locationToSend
             self.performSegue(withIdentifier: "segueToDestinationAdressVC", sender: nil)
-
         }
     }
     
@@ -115,7 +121,7 @@ extension StartingAdressViewController {
                     return
                 }
                 if let placemark = placemarks?.first {
-                    let name = placemark.name ?? ""
+                    let name = placemark.locality ?? "Unknown"
                     let lat = placemark.location?.coordinate.latitude ?? 0.0
                     let lon = placemark.location?.coordinate.longitude ?? 0.0
                     let city = Placemark(name: name, lat: lat, lon: lon)
@@ -139,8 +145,33 @@ extension StartingAdressViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        if textField.tag != 5 {
+            for loopedTextfield in adressTextFields where loopedTextfield.tag == textField.tag + 1 {
+                loopedTextfield.becomeFirstResponder()
+            }
+        }
         return true
     }
 }
+
+// MARK: - PickerView delegate conformance
+extension StartingAdressViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return  countryList.count
+    }
+}
+
+// MARK: - PickerView data source conformance
+extension StartingAdressViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return countryList[row]
+    }
+}
+
+
 
 

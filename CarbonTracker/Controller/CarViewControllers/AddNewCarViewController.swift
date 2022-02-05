@@ -106,6 +106,8 @@ extension AddNewCarViewController {
         }
     }
     
+    /// This function checks if CoreData contains entities,
+    /// and hides or reveals table view/message.
     private func updateView() {
         carTableView.reloadData()
         let hasCars = carsToDisplay.count > 0
@@ -179,5 +181,4 @@ extension AddNewCarViewController: UITableViewDataSource {
 }
 
 extension AddNewCarViewController: UITableViewDelegate {
-    
 }
