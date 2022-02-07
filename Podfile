@@ -6,6 +6,8 @@ target 'CarbonTracker' do
   use_frameworks!
 
   # Pods for CarbonTracker
+pod 'CPRingChart'
+pod 'MKRingProgressView'
 pod 'Alamofire', '~> 5.4'
 
   target 'CarbonTrackerTests' do

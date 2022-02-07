@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FootprintCalculationsHelper {
+final class FootprintCalculationsHelper {
 
     
     // MARK: - Properties' getters
