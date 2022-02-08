@@ -40,8 +40,6 @@ class CustomPathRenderer: MKOverlayPathRenderer {
      path = myPath.cgPath
         
     }
-    
-    #warning("ajouter logo ct ds count view story board")
+
     #warning("ajouter share")
-    
 }

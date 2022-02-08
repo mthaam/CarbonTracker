@@ -54,6 +54,9 @@
 		8633373D27A5AFA000FFD719 /* FootprintFakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633373C27A5AFA000FFD719 /* FootprintFakeResponseData.swift */; };
 		8633373F27A5B01500FFD719 /* FootprintIncorrectData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8633373E27A5B01500FFD719 /* FootprintIncorrectData.json */; };
 		869C284E27A5D4F700FD829B /* FootprintResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C284D27A5D4F700FD829B /* FootprintResultViewController.swift */; };
+		869CE4DA27B2D98D00785744 /* CustomNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869CE4D927B2D98D00785744 /* CustomNavigationItem.swift */; };
+		869CE4DC27B2E47900785744 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869CE4DB27B2E47900785744 /* CustomAnnotationView.swift */; };
+		869CE4DE27B2EB2200785744 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869CE4DD27B2EB2200785744 /* CustomAnnotation.swift */; };
 		86D1C1A62791F1A7008B50B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1A52791F1A7008B50B0 /* AppDelegate.swift */; };
 		86D1C1A82791F1A7008B50B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C1A72791F1A7008B50B0 /* SceneDelegate.swift */; };
 		86D1C1AD2791F1A7008B50B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D1C1AB2791F1A7008B50B0 /* Main.storyboard */; };
@@ -150,6 +153,9 @@
 		8633373C27A5AFA000FFD719 /* FootprintFakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintFakeResponseData.swift; sourceTree = "<group>"; };
 		8633373E27A5B01500FFD719 /* FootprintIncorrectData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FootprintIncorrectData.json; sourceTree = "<group>"; };
 		869C284D27A5D4F700FD829B /* FootprintResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintResultViewController.swift; sourceTree = "<group>"; };
+		869CE4D927B2D98D00785744 /* CustomNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationItem.swift; sourceTree = "<group>"; };
+		869CE4DB27B2E47900785744 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		869CE4DD27B2EB2200785744 /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		86D1C1A22791F1A7008B50B0 /* CarbonTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D1C1A52791F1A7008B50B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86D1C1A72791F1A7008B50B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -233,6 +239,9 @@
 			children = (
 				86EE4B3027B1BA5C007A7CEB /* CircleView.swift */,
 				47AE429C27B200C700606C1C /* CustomPathRenderer.swift */,
+				869CE4D927B2D98D00785744 /* CustomNavigationItem.swift */,
+				869CE4DB27B2E47900785744 /* CustomAnnotationView.swift */,
+				869CE4DD27B2EB2200785744 /* CustomAnnotation.swift */,
 			);
 			path = "Custom Elements";
 			sourceTree = "<group>";
@@ -862,7 +871,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				869CE4DA27B2D98D00785744 /* CustomNavigationItem.swift in Sources */,
 				86D1C1E027920FC5008B50B0 /* APIKeys.swift in Sources */,
+				869CE4DE27B2EB2200785744 /* CustomAnnotation.swift in Sources */,
 				8629DDD02795F4EF00E3F644 /* CarModelServiceAF.swift in Sources */,
 				86D1C1F727935AA2008B50B0 /* SelectModelViewController.swift in Sources */,
 				86EE4B3127B1BA5C007A7CEB /* CircleView.swift in Sources */,
@@ -899,6 +910,7 @@
 				86EE4B2C27B17261007A7CEB /* UIColorExtension.swift in Sources */,
 				86D1C1B02791F1A7008B50B0 /* CarbonTracker.xcdatamodeld in Sources */,
 				86D1C1EA279337BA008B50B0 /* CarbonSession.swift in Sources */,
+				869CE4DC27B2E47900785744 /* CustomAnnotationView.swift in Sources */,
 				8629DDE12796C6B400E3F644 /* CarModelObjectManager.swift in Sources */,
 				479681BE27AE0A1E002C6501 /* FootprintDetailViewController.swift in Sources */,
 				862A9B73279DC90F00D933FC /* StartingAdressViewController.swift in Sources */,

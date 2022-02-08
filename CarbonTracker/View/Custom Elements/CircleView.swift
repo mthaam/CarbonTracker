@@ -16,13 +16,7 @@ import UIKit
         }
         layer.cornerRadius = frame.width / 2
         layer.masksToBounds = true
+        self.backgroundColor = .carbonPurple
     }
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }

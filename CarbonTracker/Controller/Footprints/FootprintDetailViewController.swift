@@ -128,17 +128,15 @@ extension FootprintDetailViewController {
         return [startingMapPoint, destMapPoint]
     }
     
-    /// This function returns an array of MKPointAnnotation, used to place annotations on map.
-    private func createMapAnnotations(from footprint: FootprintCdObject) -> [MKPointAnnotation] {
-        let startingAnnotation = MKPointAnnotation()
-        startingAnnotation.title = footprint.startingAdress
-        startingAnnotation.coordinate.latitude = footprint.startingAdressLat
-        startingAnnotation.coordinate.longitude = footprint.startingAdressLon
+    /// This function returns an array of CustomAnnotation, used to place annotations on map.
+    private func createMapAnnotations(from footprint: FootprintCdObject) -> [CustomAnnotation] {
+        let startingCoords = CLLocationCoordinate2D(latitude: footprint.startingAdressLat, longitude: footprint.startingAdressLon)
+        guard let startAdress = footprint.startingAdress else { return [] }
+        let startingAnnotation = CustomAnnotation(title: startAdress, coordinate: startingCoords, isDeparture: true)
         
-        let destinationAnnotation = MKPointAnnotation()
-        destinationAnnotation.title = footprint.destinationAdress
-        destinationAnnotation.coordinate.latitude = footprint.destAdressLat
-        destinationAnnotation.coordinate.longitude = footprint.destAdressLon
+        let destCoords = CLLocationCoordinate2D(latitude: footprint.destAdressLat, longitude: footprint.destAdressLon)
+        guard let destAdress = footprint.destinationAdress else { return [] }
+        let destinationAnnotation = CustomAnnotation(title: destAdress, coordinate: destCoords, isDeparture: false)
         
         return [startingAnnotation, destinationAnnotation]
     }
@@ -154,12 +152,12 @@ extension FootprintDetailViewController {
 
 extension FootprintDetailViewController: MKMapViewDelegate {
     
+    /// This function adds a custom renderer to map.
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if let overlay = overlay as? MKPolyline {
             let curvedRenderer = CustomPathRenderer(polyline: overlay)
             curvedRenderer.lineWidth = 5
             curvedRenderer.strokeColor = .carbonBlue
-            #warning("try to animate alpha.")
             return curvedRenderer
         } else {
             let renderer = MKPolylineRenderer(overlay: overlay)
@@ -167,6 +165,27 @@ extension FootprintDetailViewController: MKMapViewDelegate {
             renderer.strokeColor = .carbonBlue
             return renderer
         }
+    }
+    
+    /// This function adds custom views to map.
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let id = "ID"
+        if let customAnnotation = annotation as? CustomAnnotation {
+            var view: CustomAnnotationView
+            
+            if let dequeue = mapKitView.dequeueReusableAnnotationView(withIdentifier: id) as? CustomAnnotationView {
+                dequeue.annotation = customAnnotation
+                view = dequeue
+            } else {
+                if customAnnotation.isDeparture == true {
+                    view = CustomAnnotationView(annotation: customAnnotation, reuseIdentifier: id, image: UIImage(named: "flag")!)
+                } else {
+                    view = CustomAnnotationView(annotation: customAnnotation, reuseIdentifier: id, image: UIImage(named: "flagRed")!)
+                }
+            }
+            return view
+        }
+        return nil
     }
     
 }

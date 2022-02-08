@@ -28,6 +28,7 @@ class CountViewController: UIViewController {
     @IBOutlet weak var totalCo2Label: UILabel!
     @IBOutlet weak var wastedCo2Label: UILabel!
     @IBOutlet weak var occupancyRateLabel: UILabel!
+    @IBOutlet weak var circleView: CircleView!
     
     // MARK: - Functions overrides
     
@@ -165,9 +166,11 @@ extension CountViewController {
     private func updateView() {
         let hasFootprints = footprintCdManager.all.count > 0
         messageLabel.isHidden = hasFootprints
+        circleView.isHidden = hasFootprints
         co2ringChart.isHidden = !hasFootprints
         co2DatasView.isHidden = !hasFootprints
         occupancyView.isHidden = !hasFootprints
+        occupancyRingChart.isHidden = !hasFootprints
     }
     
     /// This function sets co2RingChart parameters
