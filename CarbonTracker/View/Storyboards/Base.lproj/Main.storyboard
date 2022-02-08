@@ -37,7 +37,7 @@
         <scene sceneID="SlX-mu-uQS">
             <objects>
                 <navigationController id="1QQ-i7-RTQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Footprints" image="list.bullet.rectangle" catalog="system" selectedImage="listTabPicture" id="c1q-DC-WFW"/>
+                    <tabBarItem key="tabBarItem" title="Footprints" image="listIconBW" selectedImage="listTabPicture" id="c1q-DC-WFW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="orA-Kt-Loo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -505,7 +505,7 @@
         <scene sceneID="DDr-jm-PMP">
             <objects>
                 <navigationController id="4Pw-FG-xVQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My car" image="car.2" catalog="system" selectedImage="carTabPicture" id="5dK-5i-aXg"/>
+                    <tabBarItem key="tabBarItem" title="My car" image="carIconBW" selectedImage="carTabPicture" id="5dK-5i-aXg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YaH-v4-Wcd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1977,9 +1977,9 @@
     </scenes>
     <resources>
         <image name="car" width="154.5" height="101.5"/>
-        <image name="car.2" catalog="system" width="128" height="72"/>
         <image name="car.fill" catalog="system" width="128" height="93"/>
         <image name="carFromSide" width="103" height="31.5"/>
+        <image name="carIconBW" width="23" height="23"/>
         <image name="carTabPicture" width="128" height="128"/>
         <image name="cloud" width="394" height="185"/>
         <image name="co2" width="23" height="23"/>
@@ -1989,7 +1989,7 @@
         <image name="floppySmall-4x1" width="20" height="20"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
-        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
+        <image name="listIconBW" width="23" height="23"/>
         <image name="listTabPicture" width="128" height="128"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
