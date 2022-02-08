@@ -92,8 +92,12 @@ extension FootprintResultViewController {
         let occupiedSeatsAsInt = userInfo["updateDisplay"] as? Int
         unoccupiedSeats = occupiedSeatsAsInt
         if let seats = occupiedSeatsAsInt {
-            let seatsAsString = "not having \(seats) more passengers."
-            passengersLabel.text = seatsAsString
+            if seats > 0 {
+                let seatsAsString = "not having \(seats) more passengers."
+                passengersLabel.text = seatsAsString
+            } else {
+                passengersLabel.text = "having your car full."
+            }
         }
     }
     

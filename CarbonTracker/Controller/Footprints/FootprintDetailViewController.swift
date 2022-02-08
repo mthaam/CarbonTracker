@@ -26,6 +26,7 @@ class FootprintDetailViewController: UIViewController {
     // MARK: - Function overrides
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapKitView.delegate = self
         makeRoundCornersToViews()
         updateMap()
         updateLabels()
@@ -57,6 +58,9 @@ extension FootprintDetailViewController {
         let mapPoints = createMapPoints(from: footprint)
         let mapSize = calculateMapSize(from: mapPoints)
         let mapRect = calculateMapRect(from: mapPoints, withMapSize: mapSize)
+        
+        let polyLine = MKPolyline(points: mapPoints, count: 2)
+        mapKitView.addOverlay(polyLine, level: .aboveRoads)
         
         var region = MKCoordinateRegion(mapRect)
         region.span.latitudeDelta *= 2
@@ -144,4 +148,25 @@ extension FootprintDetailViewController {
     private func makeRoundCornersToViews() {
         upperView.layer.cornerRadius = 10
     }
+}
+
+// MARK: - MKMapViewDelegate conformance
+
+extension FootprintDetailViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if let overlay = overlay as? MKPolyline {
+            let curvedRenderer = CustomPathRenderer(polyline: overlay)
+            curvedRenderer.lineWidth = 5
+            curvedRenderer.strokeColor = .carbonBlue
+            #warning("try to animate alpha.")
+            return curvedRenderer
+        } else {
+            let renderer = MKPolylineRenderer(overlay: overlay)
+            renderer.lineWidth = 5
+            renderer.strokeColor = .carbonBlue
+            return renderer
+        }
+    }
+    
 }

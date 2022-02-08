@@ -13,6 +13,7 @@
 		479681C027B09DA2002C6501 /* FootprintCountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479681BF27B09DA2002C6501 /* FootprintCountManager.swift */; };
 		479681C227B0AA6C002C6501 /* FootprintCountTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479681C127B0AA6C002C6501 /* FootprintCountTestCase.swift */; };
 		47AAB8AF27ACBF3500910908 /* FootprintTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AAB8AE27ACBF3500910908 /* FootprintTableViewCell.swift */; };
+		47AE429D27B200C700606C1C /* CustomPathRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AE429C27B200C700606C1C /* CustomPathRenderer.swift */; };
 		47B1FE6F27926D3000B57ECD /* CarMakeServiceAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B1FE6E27926D3000B57ECD /* CarMakeServiceAF.swift */; };
 		60B715F00D6ADBDC661F5C10 /* Pods_CarbonTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600E3F5F6F29F0D8039EA936 /* Pods_CarbonTrackerTests.framework */; };
 		861C4D0327A7681B00D8E281 /* CountriesDataArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C4D0227A7681B00D8E281 /* CountriesDataArray.swift */; };
@@ -74,6 +75,7 @@
 		86D6090C2799F48A00E3E999 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6090B2799F48A00E3E999 /* CarTableViewCell.swift */; };
 		86EE4B2C27B17261007A7CEB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EE4B2B27B17261007A7CEB /* UIColorExtension.swift */; };
 		86EE4B2F27B17E09007A7CEB /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EE4B2E27B17E09007A7CEB /* UIViewExtension.swift */; };
+		86EE4B3127B1BA5C007A7CEB /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EE4B3027B1BA5C007A7CEB /* CircleView.swift */; };
 		EBC7585EC3274C2568B912CB /* Pods_CarbonTracker_CarbonTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F82C253CC1AE12FBDF64F3 /* Pods_CarbonTracker_CarbonTrackerUITests.framework */; };
 		F97B99B7E78B99DA41B11F1F /* Pods_CarbonTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CFB3C5E723624B28C0AB9 /* Pods_CarbonTracker.framework */; };
 /* End PBXBuildFile section */
@@ -104,6 +106,7 @@
 		479681BF27B09DA2002C6501 /* FootprintCountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintCountManager.swift; sourceTree = "<group>"; };
 		479681C127B0AA6C002C6501 /* FootprintCountTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintCountTestCase.swift; sourceTree = "<group>"; };
 		47AAB8AE27ACBF3500910908 /* FootprintTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintTableViewCell.swift; sourceTree = "<group>"; };
+		47AE429C27B200C700606C1C /* CustomPathRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPathRenderer.swift; sourceTree = "<group>"; };
 		47B1FE6E27926D3000B57ECD /* CarMakeServiceAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMakeServiceAF.swift; sourceTree = "<group>"; };
 		600E3F5F6F29F0D8039EA936 /* Pods_CarbonTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F82C253CC1AE12FBDF64F3 /* Pods_CarbonTracker_CarbonTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonTracker_CarbonTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +175,7 @@
 		86D6090B2799F48A00E3E999 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		86EE4B2B27B17261007A7CEB /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		86EE4B2E27B17E09007A7CEB /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		86EE4B3027B1BA5C007A7CEB /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		A6827FF36C4E1F3DAEF4AB54 /* Pods-CarbonTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-CarbonTrackerTests/Pods-CarbonTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		AEB0427626A19A42A2F25F12 /* Pods-CarbonTracker-CarbonTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTracker-CarbonTrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-CarbonTracker-CarbonTrackerUITests/Pods-CarbonTracker-CarbonTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D1EA5D9C8B47FC4087C33197 /* Pods-CarbonTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-CarbonTrackerTests/Pods-CarbonTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +226,15 @@
 				861C4D0B27AB129000D8E281 /* FootprintDataObject.swift */,
 			);
 			path = Fooprint;
+			sourceTree = "<group>";
+		};
+		47AE429E27B2126B00606C1C /* Custom Elements */ = {
+			isa = PBXGroup;
+			children = (
+				86EE4B3027B1BA5C007A7CEB /* CircleView.swift */,
+				47AE429C27B200C700606C1C /* CustomPathRenderer.swift */,
+			);
+			path = "Custom Elements";
 			sourceTree = "<group>";
 		};
 		861C4D0427A7682A00D8E281 /* Countries */ = {
@@ -460,6 +473,7 @@
 				86D6090A2799F41F00E3E999 /* Storyboards */,
 				863B2F112799FBC200FD27BB /* TableVIewCells */,
 				86EE4B2D27B17521007A7CEB /* Extensions */,
+				47AE429E27B2126B00606C1C /* Custom Elements */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -851,6 +865,7 @@
 				86D1C1E027920FC5008B50B0 /* APIKeys.swift in Sources */,
 				8629DDD02795F4EF00E3F644 /* CarModelServiceAF.swift in Sources */,
 				86D1C1F727935AA2008B50B0 /* SelectModelViewController.swift in Sources */,
+				86EE4B3127B1BA5C007A7CEB /* CircleView.swift in Sources */,
 				479681C027B09DA2002C6501 /* FootprintCountManager.swift in Sources */,
 				8633372C27A5948C00FFD719 /* CarbonFootprintAFSession.swift in Sources */,
 				8629DDDF2796C5B200E3F644 /* CarModelObject.swift in Sources */,
@@ -887,6 +902,7 @@
 				8629DDE12796C6B400E3F644 /* CarModelObjectManager.swift in Sources */,
 				479681BE27AE0A1E002C6501 /* FootprintDetailViewController.swift in Sources */,
 				862A9B73279DC90F00D933FC /* StartingAdressViewController.swift in Sources */,
+				47AE429D27B200C700606C1C /* CustomPathRenderer.swift in Sources */,
 				862A9B79279F48A800D933FC /* MapLocations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1090,6 +1106,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1120,6 +1137,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

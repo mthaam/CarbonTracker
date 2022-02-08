@@ -312,7 +312,7 @@ extension ConfirmViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
         renderer.lineWidth = 5
-        renderer.strokeColor = .magenta
+        renderer.strokeColor = .carbonBlue
         return renderer
     }
 }
