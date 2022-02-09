@@ -39,6 +39,7 @@ class CarTableViewCell: UITableViewCell {
     /// to cell
     private func setupCell() {
         coloredView.layer.cornerRadius = 10
+        coloredView.addShadow()
     }
     
     /// This function updates labels.

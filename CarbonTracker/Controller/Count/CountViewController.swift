@@ -34,6 +34,7 @@ class CountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        circleView.addShadow()
         addObservers()
         setupCo2RingChart()
     }

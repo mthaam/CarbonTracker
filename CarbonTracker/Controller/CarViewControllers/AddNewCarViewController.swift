@@ -18,6 +18,7 @@ class AddNewCarViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var carTableView: UITableView!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var circleView: CircleView!
     
 }
 
@@ -27,6 +28,7 @@ extension AddNewCarViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        circleView.addShadow()
         carTableView.delegate = self
         carTableView.dataSource = self
         toggleActivityIndicator(shown: false)
@@ -113,6 +115,7 @@ extension AddNewCarViewController {
         let hasCars = carsToDisplay.count > 0
         carTableView.isHidden = !hasCars
         messageLabel.isHidden = hasCars
+        circleView.isHidden = hasCars
     }
     
     private func useOrDeleteCar(sender: UIButton) {

@@ -19,6 +19,7 @@ class FootprintsViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var circleView: CircleView!
     
 }
 
@@ -27,6 +28,7 @@ extension FootprintsViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        circleView.addShadow()
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -88,6 +90,7 @@ extension FootprintsViewController {
         let hasFootprints = footprintCoreDataManager.all.count > 0
         tableView.isHidden = !hasFootprints
         messageLabel.isHidden = hasFootprints
+        circleView.isHidden = hasFootprints
     }
 }
 

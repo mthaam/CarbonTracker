@@ -15,7 +15,7 @@ import UIKit
             NSLog("Ended up with a non-square frame -- so it may not be a circle");
         }
         layer.cornerRadius = frame.width / 2
-        layer.masksToBounds = true
+        layer.masksToBounds = false
         self.backgroundColor = .carbonPurple
     }
 

@@ -41,5 +41,4 @@ class CustomPathRenderer: MKOverlayPathRenderer {
         
     }
 
-    #warning("ajouter share")
 }

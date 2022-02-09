@@ -20,6 +20,7 @@ class MyCarViewController: UIViewController {
     @IBOutlet weak var carMakeLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var circleView: CircleView!
     
     // MARK: - @IBActions
     
@@ -33,6 +34,7 @@ extension MyCarViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        circleView.addShadow()
         makeRoundCornersToBlueView()
     }
     
@@ -49,6 +51,7 @@ extension MyCarViewController {
     /// This function makes round corners to blue view.
     private func makeRoundCornersToBlueView() {
         blueView.layer.cornerRadius = 10
+        blueView.addShadow()
     }
     
     /// This function retrieves current used car
@@ -72,6 +75,7 @@ extension MyCarViewController {
     
     private func updateDisplay(shown: Bool) {
         blueView.isHidden = !shown
+        circleView.isHidden = shown
         noCarLabel.isHidden = shown
     }
     

@@ -29,6 +29,7 @@ class FootprintTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         makeRoundCornersToViews()
+        mainView.addShadow()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
