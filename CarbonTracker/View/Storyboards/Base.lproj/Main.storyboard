@@ -1793,6 +1793,36 @@
             </objects>
             <point key="canvasLocation" x="3958" y="-1745"/>
         </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="x4K-9V-t1T">
+            <objects>
+                <viewController storyboardIdentifier="onboardingVC" id="ptV-br-Ab0" customClass="OnboardingViewController" customModule="CarbonTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6wL-iX-PBF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2JB-Qq-IUC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.0" green="0.83592069149017334" blue="0.62189674377441406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k4k-UJ-ANw"/>
+                        <color key="backgroundColor" red="0.0" green="0.83592069149017334" blue="0.62189674377441406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2JB-Qq-IUC" firstAttribute="bottom" secondItem="k4k-UJ-ANw" secondAttribute="bottom" id="AaP-qH-0wt"/>
+                            <constraint firstItem="2JB-Qq-IUC" firstAttribute="leading" secondItem="k4k-UJ-ANw" secondAttribute="leading" id="RJ4-0v-a32"/>
+                            <constraint firstItem="2JB-Qq-IUC" firstAttribute="trailing" secondItem="k4k-UJ-ANw" secondAttribute="trailing" id="kEA-rD-0mt"/>
+                            <constraint firstItem="2JB-Qq-IUC" firstAttribute="top" secondItem="k4k-UJ-ANw" secondAttribute="top" id="ocG-Go-QQH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="holderView" destination="2JB-Qq-IUC" id="LAQ-uN-PPX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o1J-O7-IfI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-54.375" y="-2588.0281690140846"/>
+        </scene>
         <!--Footprint Detail-->
         <scene sceneID="Pcc-DC-UCM">
             <objects>

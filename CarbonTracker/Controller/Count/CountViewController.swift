@@ -32,6 +32,15 @@ class CountViewController: UIViewController {
     
     // MARK: - Functions overrides
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if CoreUserDefaults.shared.isNewUser() {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "onboardingVC") as! OnboardingViewController
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         circleView.addShadow()

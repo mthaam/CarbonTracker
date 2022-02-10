@@ -53,6 +53,8 @@
 		8633373B27A5AEB800FFD719 /* FootprintCorrectData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8633373A27A5AEB800FFD719 /* FootprintCorrectData.json */; };
 		8633373D27A5AFA000FFD719 /* FootprintFakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633373C27A5AFA000FFD719 /* FootprintFakeResponseData.swift */; };
 		8633373F27A5B01500FFD719 /* FootprintIncorrectData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8633373E27A5B01500FFD719 /* FootprintIncorrectData.json */; };
+		866C2E5827B5605D000C2BF5 /* CoreUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C2E5727B5605D000C2BF5 /* CoreUserDefaults.swift */; };
+		866C2E5B27B560D2000C2BF5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C2E5A27B560D2000C2BF5 /* OnboardingViewController.swift */; };
 		869C284E27A5D4F700FD829B /* FootprintResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C284D27A5D4F700FD829B /* FootprintResultViewController.swift */; };
 		869CE4DA27B2D98D00785744 /* CustomNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869CE4D927B2D98D00785744 /* CustomNavigationItem.swift */; };
 		869CE4DC27B2E47900785744 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869CE4DB27B2E47900785744 /* CustomAnnotationView.swift */; };
@@ -154,6 +156,8 @@
 		8633373A27A5AEB800FFD719 /* FootprintCorrectData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FootprintCorrectData.json; sourceTree = "<group>"; };
 		8633373C27A5AFA000FFD719 /* FootprintFakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintFakeResponseData.swift; sourceTree = "<group>"; };
 		8633373E27A5B01500FFD719 /* FootprintIncorrectData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FootprintIncorrectData.json; sourceTree = "<group>"; };
+		866C2E5727B5605D000C2BF5 /* CoreUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreUserDefaults.swift; sourceTree = "<group>"; };
+		866C2E5A27B560D2000C2BF5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		869C284D27A5D4F700FD829B /* FootprintResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintResultViewController.swift; sourceTree = "<group>"; };
 		869CE4D927B2D98D00785744 /* CustomNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationItem.swift; sourceTree = "<group>"; };
 		869CE4DB27B2E47900785744 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
@@ -410,6 +414,22 @@
 			path = TableVIewCells;
 			sourceTree = "<group>";
 		};
+		866C2E5927B5606B000C2BF5 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				866C2E5727B5605D000C2BF5 /* CoreUserDefaults.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		866C2E5C27B560DA000C2BF5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				866C2E5A27B560D2000C2BF5 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		86D1C1992791F1A7008B50B0 = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +497,7 @@
 				862A9B7A279F48B400D933FC /* MapDatas */,
 				861C4D0427A7682A00D8E281 /* Countries */,
 				861C4D0727A9ACFC00D8E281 /* Footprint calculations */,
+				866C2E5927B5606B000C2BF5 /* UserDefaults */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -498,6 +519,7 @@
 				86D1C1E5279218A8008B50B0 /* CarViewControllers */,
 				86D1C1EE279349BE008B50B0 /* Footprints */,
 				86D1C1F127934A0F008B50B0 /* Count */,
+				866C2E5C27B560DA000C2BF5 /* Onboarding */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -936,7 +958,9 @@
 				869CE4DC27B2E47900785744 /* CustomAnnotationView.swift in Sources */,
 				8629DDE12796C6B400E3F644 /* CarModelObjectManager.swift in Sources */,
 				479681BE27AE0A1E002C6501 /* FootprintDetailViewController.swift in Sources */,
+				866C2E5B27B560D2000C2BF5 /* OnboardingViewController.swift in Sources */,
 				862A9B73279DC90F00D933FC /* StartingAdressViewController.swift in Sources */,
+				866C2E5827B5605D000C2BF5 /* CoreUserDefaults.swift in Sources */,
 				47AE429D27B200C700606C1C /* CustomPathRenderer.swift in Sources */,
 				862A9B79279F48A800D933FC /* MapLocations.swift in Sources */,
 			);
