@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		471B91DE27B5FAB600FC1E8A /* CountModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471B91DD27B5FAB600FC1E8A /* CountModalViewController.swift */; };
 		4768DE4627A8CB5A00577A68 /* FootprintCdObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4768DE4527A8CB5A00577A68 /* FootprintCdObject.swift */; };
 		4768DE4827A8CB7800577A68 /* FootprintCdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4768DE4727A8CB7800577A68 /* FootprintCdManager.swift */; };
 		479681BE27AE0A1E002C6501 /* FootprintDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479681BD27AE0A1E002C6501 /* FootprintDetailViewController.swift */; };
@@ -107,6 +108,7 @@
 /* Begin PBXFileReference section */
 		1D7CFB3C5E723624B28C0AB9 /* Pods_CarbonTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarbonTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5D544A833157E601A7D2DF /* Pods-CarbonTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarbonTracker.debug.xcconfig"; path = "Target Support Files/Pods-CarbonTracker/Pods-CarbonTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		471B91DD27B5FAB600FC1E8A /* CountModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountModalViewController.swift; sourceTree = "<group>"; };
 		4768DE4527A8CB5A00577A68 /* FootprintCdObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintCdObject.swift; sourceTree = "<group>"; };
 		4768DE4727A8CB7800577A68 /* FootprintCdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintCdManager.swift; sourceTree = "<group>"; };
 		479681BD27AE0A1E002C6501 /* FootprintDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintDetailViewController.swift; sourceTree = "<group>"; };
@@ -608,6 +610,7 @@
 			isa = PBXGroup;
 			children = (
 				86D1C1EF27934A0B008B50B0 /* CountViewController.swift */,
+				471B91DD27B5FAB600FC1E8A /* CountModalViewController.swift */,
 			);
 			path = Count;
 			sourceTree = "<group>";
@@ -926,6 +929,7 @@
 				8629DDDF2796C5B200E3F644 /* CarModelObject.swift in Sources */,
 				8633372A27A1AF6D00FFD719 /* LocationDatas.swift in Sources */,
 				8629DDCC2794876200E3F644 /* NetworkErrors.swift in Sources */,
+				471B91DE27B5FAB600FC1E8A /* CountModalViewController.swift in Sources */,
 				86E5A34127B4260500EEE41D /* GeoCoderHelper.swift in Sources */,
 				4768DE4827A8CB7800577A68 /* FootprintCdManager.swift in Sources */,
 				8633373627A5A52B00FFD719 /* CarbonFootprintSessionAF.swift in Sources */,

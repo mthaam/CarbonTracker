@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -499,6 +500,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Count" id="hNv-48-j1e" customClass="CustomNavigationItem" customModule="CarbonTracker" customModuleProvider="target"/>
                     <connections>
+                        <outlet property="backgroundView" destination="hsO-qz-9Mw" id="iZX-Qw-FLJ"/>
                         <outlet property="circleView" destination="Cex-e7-XpF" id="6H4-X8-15l"/>
                         <outlet property="co2DatasView" destination="MHd-o2-A1O" id="fez-wb-IKt"/>
                         <outlet property="co2ringChart" destination="iP6-L5-pcg" id="HKe-3r-zDu"/>
@@ -508,11 +510,120 @@
                         <outlet property="occupancyView" destination="NDG-iC-LEv" id="HvN-KG-leL"/>
                         <outlet property="totalCo2Label" destination="tHN-Pv-Za5" id="eyf-Nl-kWY"/>
                         <outlet property="wastedCo2Label" destination="RFH-CW-ucx" id="Hrz-q3-1E8"/>
+                        <segue destination="D0v-C0-xqp" kind="presentation" identifier="segueToModalVC" id="Vq6-YZ-xax"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEp-Ki-vw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="918.75" y="-1046.8309859154929"/>
+        </scene>
+        <!--Count Modal View Controller-->
+        <scene sceneID="kVy-Ca-fJ8">
+            <objects>
+                <viewController id="D0v-C0-xqp" customClass="CountModalViewController" customModule="CarbonTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ykr-VN-ap8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5s-t7-WRh" userLabel="Background View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GsK-Ut-Dd3" customClass="MKRingProgressView">
+                                        <rect key="frame" x="32" y="146" width="256" height="256"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="GsK-Ut-Dd3" secondAttribute="height" multiplier="1:1" id="to5-U5-Hiq"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" red="0.57742357249999998" green="0.3978222609" blue="0.57231211660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" red="0.56754661159999997" green="0.89601522680000001" blue="0.87671000349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="ringWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                <real key="value" value="1.4009"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xel-pp-Ffx" userLabel="Occupancy View">
+                                        <rect key="frame" x="32" y="418" width="256" height="114"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Py7-3A-tEZ" userLabel="Main Stack View">
+                                                <rect key="frame" x="4" y="-13.5" width="248" height="141"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tld-Sk-PZu" userLabel="Upper Stack View">
+                                                        <rect key="frame" x="46" y="0.0" width="156" height="57.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1240" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nTa-FM-NSg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="115.5" height="57.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                                                <color key="textColor" red="0.57742357249999998" green="0.3978222609" blue="0.57231211660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="q35-JZ-Q8E" userLabel=" total">
+                                                                <rect key="frame" x="119.5" y="9.5" width="36.5" height="38.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                                <color key="textColor" red="0.57742357249999998" green="0.3978222609" blue="0.57231211660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="X2I-QZ-99h" userLabel="Bottom Stack View">
+                                                        <rect key="frame" x="2" y="64.5" width="244.5" height="76.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="could have been saved if you travelled with sustainable transportation. (Source Ademe Data)." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="woy-FM-vRj" userLabel=" total">
+                                                                <rect key="frame" x="0.0" y="0.0" width="244.5" height="76.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Py7-3A-tEZ" firstAttribute="leading" secondItem="xel-pp-Ffx" secondAttribute="leading" constant="4" id="cMJ-6m-egJ"/>
+                                            <constraint firstItem="Py7-3A-tEZ" firstAttribute="centerY" secondItem="xel-pp-Ffx" secondAttribute="centerY" id="hw8-3Q-YLQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Py7-3A-tEZ" secondAttribute="trailing" constant="4" id="jSv-9G-msg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.37647059560000001" green="0.82352948189999997" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="xel-pp-Ffx" firstAttribute="leading" secondItem="GsK-Ut-Dd3" secondAttribute="leading" id="5OE-tk-lzp"/>
+                                    <constraint firstItem="xel-pp-Ffx" firstAttribute="top" secondItem="GsK-Ut-Dd3" secondAttribute="bottom" constant="16" id="J7n-28-NPJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="GsK-Ut-Dd3" secondAttribute="trailing" constant="32" id="Nqr-TU-fn2"/>
+                                    <constraint firstItem="GsK-Ut-Dd3" firstAttribute="centerY" secondItem="z5s-t7-WRh" secondAttribute="centerY" id="cF2-tR-tiy"/>
+                                    <constraint firstItem="GsK-Ut-Dd3" firstAttribute="leading" secondItem="z5s-t7-WRh" secondAttribute="leading" constant="32" id="jn8-Sb-0ML"/>
+                                    <constraint firstAttribute="bottom" secondItem="xel-pp-Ffx" secondAttribute="bottom" constant="16" id="sxG-YJ-pUh"/>
+                                    <constraint firstItem="xel-pp-Ffx" firstAttribute="trailing" secondItem="GsK-Ut-Dd3" secondAttribute="trailing" id="u9p-TN-9wI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GAw-nM-Gdx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GAw-nM-Gdx" firstAttribute="bottom" secondItem="z5s-t7-WRh" secondAttribute="bottom" id="GWQ-j3-lir"/>
+                            <constraint firstItem="z5s-t7-WRh" firstAttribute="top" secondItem="GAw-nM-Gdx" secondAttribute="top" id="fjr-5n-KWO"/>
+                            <constraint firstItem="z5s-t7-WRh" firstAttribute="leading" secondItem="GAw-nM-Gdx" secondAttribute="leading" id="fkl-oK-rzf"/>
+                            <constraint firstItem="z5s-t7-WRh" firstAttribute="trailing" secondItem="GAw-nM-Gdx" secondAttribute="trailing" id="v9q-4t-hzi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carbonUnitLabel" destination="q35-JZ-Q8E" id="tGd-3R-x5C"/>
+                        <outlet property="carbonWeightLabel" destination="nTa-FM-NSg" id="OIz-ww-8Ow"/>
+                        <outlet property="progressView" destination="GsK-Ut-Dd3" id="zDX-Hx-OHf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ESd-DD-4Go" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764.375" y="-1037.323943661972"/>
         </scene>
         <!--My car-->
         <scene sceneID="DDr-jm-PMP">
@@ -2067,5 +2178,8 @@
         <image name="speedometer" catalog="system" width="128" height="121"/>
         <image name="trash.fill" catalog="system" width="121" height="128"/>
         <image name="trashSmall_1" width="20" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

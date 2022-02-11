@@ -38,7 +38,7 @@ class OnboardingViewController: UIViewController {
         let labelTitles: [String] = ["Welcome! \nThis app lets you track your carbon emissions made during car travels.",
         "After this tutorial, start with going to 'My car' tab and add your car. You can even add several cars if your own more than one.",
         "Then, go to 'List tab' to add your footprints each time you travel by car.",
-        "In the 'Count' tab, you will see ring charts updated each time you add a footprint."]
+        "In the 'Count' tab, you will see ring charts updated each time you add a footprint.\nTap anywhere to comparare with "]
         
         let imageTitles: [String] = ["headerLogo", "CarScreenShot", "ListScreenShot", "countScreenShot"]
 

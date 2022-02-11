@@ -17,6 +17,8 @@ class CountViewController: UIViewController {
     var footprintCdManager = FootprintCdManager.sharedFootprintCdManager
     var footprintCountManager = FootprintCountManager()
     var co2RingChartsDatas = [Double]()
+    var Co2CountToPrepareForSegue: Double!
+    var ttlKmToPrepareForSegue: Double!
     
     // MARK: - @IBOutlets
     
@@ -29,6 +31,7 @@ class CountViewController: UIViewController {
     @IBOutlet weak var wastedCo2Label: UILabel!
     @IBOutlet weak var occupancyRateLabel: UILabel!
     @IBOutlet weak var circleView: CircleView!
+    @IBOutlet weak var backgroundView: UIView!
     
     // MARK: - Functions overrides
     
@@ -57,6 +60,15 @@ class CountViewController: UIViewController {
         animateOccupancyAlpha()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "segueToModalVC" {
+            let destinationVC = segue.destination as! CountModalViewController
+            destinationVC.ttlKmReceivedFromSegue = ttlKmToPrepareForSegue
+            destinationVC.Co2CountReceivedFromSegue = Co2CountToPrepareForSegue
+        }
+    }
+    
 }
 
 // MARK: - @ObjC Functions
@@ -73,6 +85,7 @@ extension CountViewController {
             co2 = co2AsDouble
         }
         co2RingChartsDatas.append(co2)
+        Co2CountToPrepareForSegue = co2
         updateCo2Labels(for: totalCo2Label, with: co2)
     }
     
@@ -103,6 +116,21 @@ extension CountViewController {
             }
             occupancyRateLabel.text = "\(averageOccupancyAsInt)"
         }
+    }
+    
+    /// This function updates kms property
+    /// lwhenever a notification is received.
+    /// - Parameter notification: a notification received.
+    @objc private func updateTotalDistance(notification: Notification)  {
+        guard let userInfo = notification.userInfo else { return }
+        if let totalDistanceAsDbl = userInfo["updateDisplay"] as? Double {
+            ttlKmToPrepareForSegue = totalDistanceAsDbl
+        }
+    }
+    
+    /// This function performs segue when a tap is detected.
+    @objc private func handleTap(_: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "segueToModalVC", sender: nil)
     }
 }
 
@@ -150,6 +178,7 @@ extension CountViewController {
         footprintCountManager.calculateFootprintsCo2Count(from: footprintCdManager.all)
         footprintCountManager.calculateFootprintsWastedCo2Count(from: footprintCdManager.all)
         footprintCountManager.calculateAverageCarOccupancy(from: footprintCdManager.all)
+        footprintCountManager.calculateTotalDistanceTraveled(from: footprintCdManager.all)
     }
     
     /// This function updates co2RingChart values
@@ -181,6 +210,14 @@ extension CountViewController {
         co2DatasView.isHidden = !hasFootprints
         occupancyView.isHidden = !hasFootprints
         occupancyRingChart.isHidden = !hasFootprints
+        if hasFootprints {
+            let backgroundTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+            let co2TapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+            let occupcyTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+            co2ringChart.addGestureRecognizer(co2TapGestureRecognizer)
+            occupancyRingChart.addGestureRecognizer(occupcyTapGestureRecognizer)
+            backgroundView.addGestureRecognizer(backgroundTapGestureRecognizer)
+        }
     }
     
     /// This function sets co2RingChart parameters
@@ -203,6 +240,8 @@ extension CountViewController {
                                                name: Notification.Name("updateWastedCo2Count"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateAverageOccupancy(notification:)),
                                                name: Notification.Name("updateOccupancyAverage"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTotalDistance(notification:)),
+                                               name: Notification.Name("updateTotalDistance"), object: nil)
     }
     
 }
