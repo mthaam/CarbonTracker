@@ -51,6 +51,7 @@ extension DestinationAdressViewController {
 // MARK: - Functions
 extension DestinationAdressViewController {
     
+    /// This function sets self as textfields delagate.
     private func setDelegates() {
         for textField in adressTextFields {
             if textField.tag == 1 {

@@ -7,6 +7,9 @@
 
 import Foundation
 
+// The var below is used
+// to fill UIPickerViews rows.
+
 var countryList = ["Afghanistan",
                    "Albania",
                    "Algeria","Andorra",

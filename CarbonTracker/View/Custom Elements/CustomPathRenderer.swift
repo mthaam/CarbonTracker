@@ -8,6 +8,8 @@
 import UIKit
 import MapKit
 
+/// This class defines a path renderer.
+/// It inherits from MKOverlayPathRenderer.
 class CustomPathRenderer: MKOverlayPathRenderer {
 
     /// The polyline to render

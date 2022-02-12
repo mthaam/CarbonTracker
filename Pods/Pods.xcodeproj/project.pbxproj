@@ -184,7 +184,7 @@
 		55C5F6E08AD78B26941BDE6AD8876439 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		55D1F804450048A7B1BF5E97AE8A17E2 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		571A12EA2510C78768BC676A3372A379 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E3B4A8AE196B92547B67BBA866EE035 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		600E7F6802C4B56A57589C14A823C0C6 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		63EE58903A76044C1E46CF75DFED0A6B /* MKRingProgressView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKRingProgressView.release.xcconfig; sourceTree = "<group>"; };
@@ -238,11 +238,11 @@
 		D694EB77A9584C0FEC67720394B68359 /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
 		DA0C98AE4899B938E6016F741DDBC26D /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		DD66C3017D0C5494462E776BB98DFF6F /* Pods-CarbonTracker-CarbonTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarbonTracker-CarbonTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DFFF396A7283A65507AFF68552B0BAE7 /* MKRingProgressView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MKRingProgressView; path = MKRingProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFFF396A7283A65507AFF68552B0BAE7 /* MKRingProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MKRingProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03D5E9A8BB39605A40AAD34F3B127CF /* Pods-CarbonTracker-CarbonTrackerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CarbonTracker-CarbonTrackerUITests-dummy.m"; sourceTree = "<group>"; };
 		E09CC509364BBA4C4E36AF23E63E618C /* CircleProgressView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircleProgressView.release.xcconfig; sourceTree = "<group>"; };
 		E1329141CCAEA86F8BA5ACAE3404E5BE /* Pods-CarbonTrackerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CarbonTrackerTests-umbrella.h"; sourceTree = "<group>"; };
-		E3DECA80038A59475D88147C98048CBF /* CPRingChart */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CPRingChart; path = CPRingChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3DECA80038A59475D88147C98048CBF /* CPRingChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CPRingChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E432840962651DDC166922E11D933C97 /* CPRingChart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CPRingChart.release.xcconfig; sourceTree = "<group>"; };
 		E7276A62437B879F71940D3B29DDA23D /* Pods-CarbonTrackerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CarbonTrackerTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E73EEF4EEAED11ABDCB1B17B55A75355 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -362,10 +362,10 @@
 		397CC53227753E76850AF119FA0BE690 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
 				4D250324E85E59019E3CE77667BC1DE5 /* CircleProgressView.framework */,
-				E3DECA80038A59475D88147C98048CBF /* CPRingChart */,
-				DFFF396A7283A65507AFF68552B0BAE7 /* MKRingProgressView */,
+				E3DECA80038A59475D88147C98048CBF /* CPRingChart.framework */,
+				DFFF396A7283A65507AFF68552B0BAE7 /* MKRingProgressView.framework */,
 				A5FB6B79AE6898A14D9C706A59C6C3CA /* Pods-CarbonTracker */,
 				A7CECB4FB8B74769FE685184D3CA11F0 /* Pods-CarbonTracker-CarbonTrackerUITests */,
 				237F17F7CD2454A6382B4CE27279E8E4 /* Pods-CarbonTrackerTests */,
@@ -662,7 +662,7 @@
 			);
 			name = MKRingProgressView;
 			productName = MKRingProgressView;
-			productReference = DFFF396A7283A65507AFF68552B0BAE7 /* MKRingProgressView */;
+			productReference = DFFF396A7283A65507AFF68552B0BAE7 /* MKRingProgressView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		81FA95B4C2E84E985613148425A8CF11 /* Pods-CarbonTracker-CarbonTrackerUITests */ = {
@@ -722,7 +722,7 @@
 			);
 			name = CPRingChart;
 			productName = CPRingChart;
-			productReference = E3DECA80038A59475D88147C98048CBF /* CPRingChart */;
+			productReference = E3DECA80038A59475D88147C98048CBF /* CPRingChart.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
@@ -740,7 +740,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F9BA78AB4C5679CED9CE6FCC082DEA16 /* Pods-CarbonTracker */ = {
@@ -772,7 +772,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					4949F2E81928B23F0DBD7CBD4C7FAD08 = {
 						LastSwiftMigration = 1320;
@@ -1072,7 +1072,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CircleProgressView/CircleProgressView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CircleProgressView/CircleProgressView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1248,7 +1248,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CPRingChart/CPRingChart-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CPRingChart/CPRingChart-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1283,7 +1283,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1356,7 +1356,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CPRingChart/CPRingChart-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CPRingChart/CPRingChart-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1391,7 +1391,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MKRingProgressView/MKRingProgressView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MKRingProgressView/MKRingProgressView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1425,7 +1425,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CircleProgressView/CircleProgressView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CircleProgressView/CircleProgressView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1560,7 +1560,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1631,7 +1631,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MKRingProgressView/MKRingProgressView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MKRingProgressView/MKRingProgressView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

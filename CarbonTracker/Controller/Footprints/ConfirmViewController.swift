@@ -64,22 +64,27 @@ extension ConfirmViewController {
 // MARK: - @IBActions
 extension ConfirmViewController {
     
+    /// This function is called after sender was tapped.
     @IBAction func editStartingAdressButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "unwindSegueToStartingAdressVC", sender: nil)
     }
     
+    /// This function is called after sender was tapped.
     @IBAction func editDestinationAdressButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "unwindSegueToDestinationAdressVC", sender: nil)
     }
     
+    /// This function is called after sender was tapped.
     @IBAction func personsStepperValueChanged(_ sender: UIStepper) {
         steppersLabels[0].text = Int(sender.value).description
     }
     
+    /// This function is called after sender was tapped.
     @IBAction func seatsStepperValueChanged(_ sender: UIStepper) {
         steppersLabels[1].text = Int(sender.value).description
     }
     
+    /// This function is called after sender was tapped.
     @IBAction func didTapCalculateFootprintBtn(_ sender: Any) {
         proceedToNextVC()
     }
@@ -93,12 +98,18 @@ extension ConfirmViewController {
     /// to views.
     private func makeRoundCornersToViews() {
         startView.layer.cornerRadius = 10
-        startView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         darkGreenView.layer.cornerRadius = 10
         mapKitView.layer.cornerRadius = 10
-        mapKitView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         lowerStackView.layer.cornerRadius = 10
-        lowerStackView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        if #available(iOS 11.0, *) {
+            startView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            mapKitView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+            lowerStackView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        
     }
     
     /// This function sets labels's texts.
@@ -307,6 +318,7 @@ extension ConfirmViewController {
     }
 }
 
+// MARK: - MKMAPVIEW Delegate protocol conformance
 extension ConfirmViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {

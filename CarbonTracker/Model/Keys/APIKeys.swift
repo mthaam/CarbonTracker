@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// This class stores Api keys.
 final class ApiKeys {
     static let carbonInterfaceKey: String = "7bp91HHpHKPNtgUmSxhRjA"
 }

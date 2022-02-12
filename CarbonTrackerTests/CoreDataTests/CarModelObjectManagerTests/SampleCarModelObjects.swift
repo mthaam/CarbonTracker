@@ -8,6 +8,8 @@
 import Foundation
 @testable import CarbonTracker
 
+/// This class is used to staticly access
+/// its constants for testing purposes.
 final class SampleCarModelObjects {
     
     static let f50 = CarModelDatas(data: CarModels(id: "585fd31a-2b1d-4a04-964a-1e7480b8bb54", attributes: CarAttributes(name: "Ferrari F50", year: 1995, vehicle_make: "Ferrari")))

@@ -7,6 +7,10 @@
 
 import Foundation
 
+/// This class is used to perform miscellaneous
+/// calculations related to footprints.
+/// - Note that getters at top level
+/// are used for testing purposes.
 final class FootprintCalculationsHelper {
 
     

@@ -7,6 +7,8 @@
 
 import UIKit
 
+/// This class defines a circular view.
+/// It inherits from UIView.
 @IBDesignable class CircleView: UIView {
 
     override func layoutSubviews() {

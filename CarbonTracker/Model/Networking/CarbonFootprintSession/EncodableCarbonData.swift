@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// This struct is used to encode data.
 struct EncodableDataRequest: Encodable {
     let type: String
     let distance_unit: String

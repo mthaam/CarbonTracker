@@ -7,7 +7,11 @@
 
 import UIKit
 
+// MARK: - Class Declaration
+
 class SelectMakeViewController: UIViewController {
+    
+    // MARK: - OUTLETS AND PROPERTIES
     
     @IBOutlet weak var carMakesPickerView: UIPickerView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -40,6 +44,8 @@ extension SelectMakeViewController {
 
 extension SelectMakeViewController {
     
+    /// This function is called after given button
+    /// was tapped.
     @IBAction func searchModelButtonTapped(_ sender: Any) {
         searchModelBtnTapped()
     }
@@ -49,6 +55,8 @@ extension SelectMakeViewController {
 
 extension SelectMakeViewController {
     
+    /// This function calls specified model's function
+    /// to fetch models of a car make.
     private func searchModelBtnTapped() {
         toggleActivityIndicator(shown: true)
         let selectedCarMakeId = carMakes[carMakesPickerView.selectedRow(inComponent: 0)].data.id
@@ -64,6 +72,7 @@ extension SelectMakeViewController {
         }
     }
     
+    /// This function toggles activity indicator.
     private func toggleActivityIndicator(shown: Bool) {
         activityIndicator.isHidden = !shown
     }
@@ -78,6 +87,8 @@ extension SelectMakeViewController {
     }
 }
 
+// MARK: Picker view data source protocol conformance
+
 extension SelectMakeViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -89,6 +100,8 @@ extension SelectMakeViewController: UIPickerViewDataSource {
     
     
 }
+
+// MARK: Picker view delegate protocol conformance
 
 extension SelectMakeViewController: UIPickerViewDelegate {
     

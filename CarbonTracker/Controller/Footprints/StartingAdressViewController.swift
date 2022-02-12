@@ -35,9 +35,12 @@ extension StartingAdressViewController {
     
     @IBAction func unwindToStartingAdressVC(segue: UIStoryboardSegue) {}
     
+    /// This function is called after sender was tapped.
     @IBAction func nextButtonTapped(_ sender: Any) {
         proceedToNextVC()
     }
+    
+    /// This function is called after sender was tapped.
     @IBAction func didTappedMainView(_ sender: Any) {
         for textField in adressTextFields {
             textField.resignFirstResponder()
@@ -48,6 +51,7 @@ extension StartingAdressViewController {
 // MARK: - Functions
 extension StartingAdressViewController {
     
+    /// This function sets self as textfields delagate.
     private func setDelegates() {
         for textField in adressTextFields {
             if textField.tag == 1 {

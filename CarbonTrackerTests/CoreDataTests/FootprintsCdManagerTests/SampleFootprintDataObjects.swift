@@ -8,6 +8,8 @@
 import Foundation
 @testable import CarbonTracker
 
+/// This class is used to staticly access
+/// its constants for testing purposes.
 final class SampleFootprintDataObjects {
     
     static let footprint1 = FootprintDataObject(actualFootprint: 3.745, carMake: "Ford", carModel: "Kuga (2020)", date: Date(), startingAdressLat: 2.757484, startingAdressLon: 47.9384884, destAdressLat: 3.8478484, destAdressLon: 44.9387373, startingAdress: "7 rue des sources Lyon", destinationAdress: "8 rue des sources Lyon", distance: 1.1, numberOfPax: 3, numberOfSeats: 6, occupancyScore: 50, unoccupiedSeats: 3, wastedCo2: 2.1)

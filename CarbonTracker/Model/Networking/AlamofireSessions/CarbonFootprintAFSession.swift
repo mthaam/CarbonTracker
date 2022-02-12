@@ -8,8 +8,14 @@
 import Foundation
 import Alamofire
 
+/// This class is used to perform network calls
+/// through Alamofire. It implicitly conforms to
+/// AlamofireSessionProtocol thanks inheriting
+/// from CarbonSession class.
 class CarbonFootprintAFSession: CarbonSession {
     
+    /// This function performs requests through
+    /// Alamofire.
     override func request(with url: String, data: EncodableDataRequest? = nil, completion: @escaping (AFDataResponse<Any>) -> Void) {
         let headers: HTTPHeaders = [
             .authorization(bearerToken: "\(ApiKeys.carbonInterfaceKey)"),

@@ -14,7 +14,7 @@
 		<key>CPRingChart.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>6</integer>
 		</dict>
 		<key>CircleProgressView.xcscheme_^#shared#^_</key>
 		<dict>
@@ -24,7 +24,7 @@
 		<key>MKRingProgressView.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>7</integer>
 		</dict>
 		<key>Pods-CarbonTracker-CarbonTrackerUITests.xcscheme</key>
 		<dict>

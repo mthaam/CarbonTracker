@@ -7,6 +7,11 @@
 
 import Foundation
 
+/// This struct, quite similar to core data's
+/// footprint object, is used to gather
+/// all required data from labels and pass
+/// it as an argument to the save function
+/// of FootprintCdManager.
 struct FootprintDataObject {
     let actualFootprint: Double
     let carMake: String

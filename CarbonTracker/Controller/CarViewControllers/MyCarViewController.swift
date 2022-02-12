@@ -65,6 +65,7 @@ extension MyCarViewController {
         }
     }
     
+    /// This function updates labels.
     private func updateLabels(from car: CarModels?) {
         guard let unwrappedCar = car else { return }
         carMakeLabel.text = unwrappedCar.attributes.vehicle_make
@@ -73,6 +74,8 @@ extension MyCarViewController {
         updateDisplay(shown: true)
     }
     
+    /// This function updates view appearance
+    /// or disapperance..
     private func updateDisplay(shown: Bool) {
         blueView.isHidden = !shown
         circleView.isHidden = shown

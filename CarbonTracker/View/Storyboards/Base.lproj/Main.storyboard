@@ -544,16 +544,13 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="ringWidth">
                                                 <real key="value" value="30"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                <real key="value" value="1.4009"/>
-                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xel-pp-Ffx" userLabel="Occupancy View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xel-pp-Ffx" userLabel="Labels View">
                                         <rect key="frame" x="32" y="418" width="256" height="114"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Py7-3A-tEZ" userLabel="Main Stack View">
-                                                <rect key="frame" x="4" y="-13.5" width="248" height="141"/>
+                                                <rect key="frame" x="4" y="-23" width="248" height="160"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tld-Sk-PZu" userLabel="Upper Stack View">
                                                         <rect key="frame" x="46" y="0.0" width="156" height="57.5"/>
@@ -573,10 +570,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="X2I-QZ-99h" userLabel="Bottom Stack View">
-                                                        <rect key="frame" x="2" y="64.5" width="244.5" height="76.5"/>
+                                                        <rect key="frame" x="11.5" y="64.5" width="225.5" height="95.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="could have been saved if you travelled with sustainable transportation. (Source Ademe Data)." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="woy-FM-vRj" userLabel=" total">
-                                                                <rect key="frame" x="0.0" y="0.0" width="244.5" height="76.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="could have been saved if you travelled with sustainable transportation. ( Train comparison, source Ademe Data)." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="woy-FM-vRj" userLabel=" total">
+                                                                <rect key="frame" x="0.0" y="0.0" width="225.5" height="95.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>

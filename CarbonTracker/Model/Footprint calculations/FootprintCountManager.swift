@@ -8,6 +8,11 @@
 import Foundation
 
 // MARK: - Class Declaration
+
+/// This class is used to perform miscellaneous
+/// calculations related to co2 count.
+/// - Note that getters at top level
+/// are used for testing purposes.
 final class FootprintCountManager {
     
     // MARK: -  Getters
@@ -168,6 +173,5 @@ extension FootprintCountManager {
         }
         return double
     }
-    
     
 }

@@ -7,6 +7,10 @@
 
 import Foundation
 
+/// This class, conforming to singleton pattern,
+/// is used to momentarily store user's adresses
+/// while searching locations through CLLocation
+/// framework.
 class LocationDatas {
     
     static let sharedLocations = LocationDatas()

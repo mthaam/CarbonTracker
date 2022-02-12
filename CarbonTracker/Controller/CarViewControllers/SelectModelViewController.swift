@@ -40,6 +40,8 @@ extension SelectModelViewController {
 
 extension SelectModelViewController {
     
+    /// This function saves car to core data
+    /// by calling specified model's function.
     private func saveCar() {
         let carToSave = carModels[carModelsPickerView.selectedRow(inComponent: 0)]
         coreDataManager.saveCarModel(with: carToSave) { success in
@@ -50,6 +52,7 @@ extension SelectModelViewController {
     }
 }
 
+// MARK: Picker view data source protocol conformance
 extension SelectModelViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -60,6 +63,8 @@ extension SelectModelViewController: UIPickerViewDataSource {
     }
 
 }
+
+// MARK: Picker view delegate protocol conformance
 
 extension SelectModelViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

@@ -7,12 +7,18 @@
 
 import Foundation
 
+/// This struct is used to create
+/// placemarks used in location related
+/// functions.
 struct Placemark {
     var name: String
     var lat: Double
     var lon: Double
 }
 
+/// This struct is used to create
+/// placemarks used in location related
+/// functions.
 struct Location {
     let streetNumber: String
     let streetType: String

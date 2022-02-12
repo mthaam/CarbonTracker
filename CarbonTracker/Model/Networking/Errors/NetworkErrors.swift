@@ -8,6 +8,8 @@
 import Foundation
 import Alamofire
 
+/// This enumeration defines cases
+/// used in network related functions.
 enum NetworkErrors: Error {
     case noData
     case unableToSetUrl

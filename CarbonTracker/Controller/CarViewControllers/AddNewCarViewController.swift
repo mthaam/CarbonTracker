@@ -52,14 +52,17 @@ extension AddNewCarViewController {
 
 extension AddNewCarViewController {
     
+    /// This function is called after button is taped.
     @IBAction func addNewCarButtonTapped(_ sender: Any) {
         fetchCarMakes()
     }
     
+    /// This function is called after button is taped.
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         useOrDeleteCar(sender: sender)
     }
     
+    /// This function is called after button is taped.
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
         useOrDeleteCar(sender: sender)
     }
@@ -71,6 +74,8 @@ extension AddNewCarViewController {
 
 extension AddNewCarViewController {
     
+    /// This function fetches car makes
+    /// calling fetch function from CarMakeServiceAF class.
     private func fetchCarMakes() {
         toggleActivityIndicator(shown: true)
         CarMakeServiceAF.shared.fetchCarMakes { result in
@@ -93,6 +98,7 @@ extension AddNewCarViewController {
         present(alertViewController, animated: true, completion: nil)
     }
     
+    /// This function toggles activity indicator.
     private func toggleActivityIndicator(shown: Bool) {
         activityIndicator.isHidden = !shown
     }
@@ -118,6 +124,9 @@ extension AddNewCarViewController {
         circleView.isHidden = hasCars
     }
     
+    /// This function switches on sender's tag
+    /// and then calls another function depending
+    /// on given tag.
     private func useOrDeleteCar(sender: UIButton) {
         let point = sender.convert(CGPoint.zero, to: carTableView)
         guard let indexPath = carTableView.indexPathForRow(at: point) else { return }
@@ -133,6 +142,8 @@ extension AddNewCarViewController {
         }
     }
     
+    /// This function switch selected car to favorite,
+    /// using core data specified function.
     private func useSelectedCar(sender: UIButton, with carToUse: CarModelDatas, with indexPath: IndexPath) {
         let formerFavouriteCar = coreDataManager.fetchFavouriteCar()
         var formerFavCarArrayIndex: Int?
@@ -148,6 +159,7 @@ extension AddNewCarViewController {
         carTableView.endUpdates()
     }
     
+    /// This function updates table view rows.
     private func updateRows(with newlySavedCarIP: IndexPath, previousFavCarIP: Int? ) {
         carTableView.reloadRows(at: [newlySavedCarIP], with: .middle)
         guard let row = previousFavCarIP else { return }
@@ -155,6 +167,9 @@ extension AddNewCarViewController {
         carTableView.reloadRows(at: [formerIndexPath], with: .none)
     }
     
+    /// This function deletes specified car from
+    /// core data, by calling specific model's
+    /// function.
     private func deleteCar(sender: UIButton, with carToDelete: CarModelDatas, with indexPath: IndexPath) {
         coreDataManager.deleteCarModel(with: carToDelete) { success in
             self.carsToDisplay.remove(at: indexPath.row)
@@ -164,6 +179,8 @@ extension AddNewCarViewController {
         }
     }
 }
+
+// MARK: - Table view data source protocol conformance
 
 extension AddNewCarViewController: UITableViewDataSource {
     
@@ -182,6 +199,8 @@ extension AddNewCarViewController: UITableViewDataSource {
     }
     
 }
+
+// MARK: - Table view delegate protocol conformance
 
 extension AddNewCarViewController: UITableViewDelegate {
 }

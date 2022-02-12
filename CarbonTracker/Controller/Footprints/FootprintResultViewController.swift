@@ -58,10 +58,12 @@ extension FootprintResultViewController {
 // MARK: - @IBActions
 extension FootprintResultViewController {
     
+    /// This function is called after sender was tapped.
     @IBAction func saveButtonTapped(_ sender: Any) {
         saveFootprint()
     }
     
+    /// This function is called after sender was tapped.
     @IBAction func exitButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "unwindSegueToFootprintsVC", sender: nil)
     }
@@ -118,6 +120,8 @@ extension FootprintResultViewController {
 // MARK: - Functions
 extension FootprintResultViewController {
     
+    /// This function saves currently displayed footprint,
+    /// by calling model's specified function.
     private func saveFootprint() {
         toggleActivityIndicator(shown: true)
         guard let footprintToSave = getFootprintDatas() else {
@@ -223,6 +227,8 @@ extension FootprintResultViewController {
         present(alertViewController, animated: true, completion: nil)
     }
     
+    /// This function toggles specified elements in
+    /// function's body.
     private func toggleActivityIndicator(shown: Bool) {
         activityIndicator.isHidden = !shown
         saveButton.isHidden = shown

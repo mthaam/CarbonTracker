@@ -52,6 +52,7 @@ extension FootprintsViewController {
 // MARK: - @IBActions
 extension FootprintsViewController {
     
+    /// This function is called after sender was tapped.
     @IBAction func didTappedPlusButton(_ sender: Any) {
         proceedToStartingAdressVC()
     }

@@ -7,16 +7,19 @@
 
 import Foundation
 
+/// This struct is used to decode receive data.
 struct CarbonFootprintObject: Decodable {
     let data: CarbonFootprintData
 }
 
+/// This struct is used to decode receive data.
 struct CarbonFootprintData: Decodable {
     let id: String
     let type: String
     let attributes: FootprintAttributes
 }
 
+/// This struct is used to decode receive data.
 struct FootprintAttributes: Decodable {
     let distance_value: Double
     let vehicle_make: String
